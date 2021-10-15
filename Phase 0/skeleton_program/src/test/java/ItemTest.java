@@ -9,17 +9,17 @@ import static org.junit.Assert.assertEquals;
  * This class tests the Item class.
  */
 public class ItemTest {
-  	Item item;
+	Item item;
 
 	/**
 	 * Set up for testing Item class.
 	 */
 	@Before
 	public void setUp() {
-        	item = new Item("toilet paper", 99);
-    	}
+		item = new Item("toilet paper", 99);
+	}
 
-    	/**
+	/**
 	 * Test that the toString method returns the expected string representation.
 	 */
 	@Test(timeout = 100)
