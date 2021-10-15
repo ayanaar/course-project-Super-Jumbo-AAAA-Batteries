@@ -8,13 +8,13 @@ import java.util.List;
  * This class represents a user's inventory.
  */
 public class InventoryList {
-    private final List<Item> INVENTORY;
+	private final List<Item> INVENTORY;
 
 	/**
 	 * Initialize an empty inventory.
 	 */
 	public InventoryList() {
-    	this.INVENTORY = new ArrayList<>();
+		this.INVENTORY = new ArrayList<>();
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class InventoryList {
 	/**
 	 * Update the quantity of the item at the given index in the user's inventory.
 	 *
-	 * @param index 	index of item being updated.
+	 * @param index 		index of item being updated.
 	 * @param quantity 	quantity of item being updated.
 	 */
 	public void updateQuantity(int index, int quantity) {
@@ -61,7 +61,7 @@ public class InventoryList {
 			String itemOption = i + ". " + this.INVENTORY.get(i).toString() + "\n";
 			stringRepresentation.append(itemOption);	// Append item to inventory representation
 		}
-    
+
 		return stringRepresentation.toString().trim();  // Trim off last \n
 	}
 }
