@@ -34,8 +34,8 @@ public class ShoppingListUseCases {
 	 */
 	public void addShoppingListItem(String name, int quantity) {
 		Item item = new Item(name, quantity);
-        this.shoppingList.addItem(item);
-    }
+		this.shoppingList.addItem(item);
+	}
 
 	/**
 	 * Remove the item at the given index from the user's shopping list.
