@@ -30,8 +30,8 @@ public class ListManager {
 	}
 
 	/**
-	 * Add the given item (name, quantity, and possibly expiry date) to the
-	 * user's inventory.
+	 * Add the given item (name, quantity, and possibly expiry date) to
+	 * the user's inventory.
 	 *
 	 * @param name          the name of the item being added.
 	 * @param quantity      the quantity of the item being added.
