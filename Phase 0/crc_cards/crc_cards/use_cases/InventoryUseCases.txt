@@ -1,0 +1,11 @@
+Class name: InventoryUseCases
+'Role': Use Case
+
+Responsibilities:
+* Update the user's inventory by adding or removing items
+* Return a numbered list of inventory items for printing to the user
+
+Collaborators:
+* Item
+* FoodItem
+* InventoryList
