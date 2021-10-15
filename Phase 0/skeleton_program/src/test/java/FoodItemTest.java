@@ -1,7 +1,7 @@
 import entities.FoodItem;
+
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class FoodItemTest {
   	FoodItem foodItem;
 
-    /**
+  	/**
      * Set up for testing FoodItem class.
      */
     @Before
