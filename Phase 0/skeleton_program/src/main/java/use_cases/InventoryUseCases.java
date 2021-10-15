@@ -11,7 +11,7 @@ import entities.FoodItem;
 public class InventoryUseCases {
 	private final InventoryList inventory;
 
-    /**
+	/**
 	 * Initialize an empty inventory.
 	 */
 	public InventoryUseCases() {
@@ -35,8 +35,8 @@ public class InventoryUseCases {
 	 */
 	public void addInventoryItem(String name, int quantity) {
 		Item item = new Item(name, quantity);
-        this.inventory.addItem(item);
-    }
+		this.inventory.addItem(item);
+	}
 
 	/**
 	 * Add the given item (name, quantity, and expiry date) to the
@@ -48,12 +48,12 @@ public class InventoryUseCases {
 	 */
 	public void addInventoryFoodItem(String name, int quantity, int expiryDate) {
 		Item item = new FoodItem(name, quantity, expiryDate);
-        this.inventory.addItem(item);
-    }
+		this.inventory.addItem(item);
+	}
 
-    /**
+	/**
 	 * Remove the item at the given index from the inventory.
-     *
+	 *
 	 * @param index the index of the item being removed.
 	 */
 	public void removeInventoryItem(int index) {
