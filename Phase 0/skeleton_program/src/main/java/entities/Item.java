@@ -5,19 +5,19 @@ package entities;
  * This class represents an item that has a name and quantity.
  */
 public class Item {
-    private final String NAME;
-    private int quantity;
+	private final String NAME;
+	private int quantity;
 
 	/**
 	 * Initialize an Item with the given name and quantity.
 	 *
-	 * @param name 			name of item.
-	 * @param quantity 		quantity of item.
+	 * @param name 		name of item.
+	 * @param quantity 	quantity of item.
 	 */
-    public Item(String name, int quantity) {
-        this.NAME = name;
-        this.quantity = quantity;
-    }	
+	public Item(String name, int quantity) {
+		this.NAME = name;
+		this.quantity = quantity;
+	}	
 
 	/**
 	 * Return the name of the item.
@@ -36,8 +36,8 @@ public class Item {
 	public int getQuantity() {
 		return this.quantity;
 	}
-    
-    /**
+
+	/**
 	 * Update the quantity of the item by adding the given newAmount.
 	 *
 	 * @param newAmount the amount being added to the item quantity.
@@ -55,5 +55,5 @@ public class Item {
 	public String toString() {
 		return "Name: " + this.NAME + " Quantity: " + this.quantity;
 	}
- }
+}
   
