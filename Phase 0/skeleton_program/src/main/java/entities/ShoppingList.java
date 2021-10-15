@@ -8,13 +8,13 @@ import java.util.ArrayList;
  * This class represents a user's shopping list.
  */
 public class ShoppingList {
-    private final List<Item> SHOPPING_LIST;
+	private final List<Item> SHOPPING_LIST;
 
 	/**
 	 * Initialize a new empty shopping list.
 	 */
 	public ShoppingList() {
-    	this.SHOPPING_LIST = new ArrayList<>();
+		this.SHOPPING_LIST = new ArrayList<>();
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class ShoppingList {
 			String itemOption = i + ". " + this.SHOPPING_LIST.get(i).toString() + "\n";
 			stringRepresentation.append(itemOption);	// Append item to shopping list representation
 		}
-    
+
 		return stringRepresentation.toString().trim();  // Trim off last \n
 	}
 }
