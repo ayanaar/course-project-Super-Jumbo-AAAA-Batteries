@@ -22,7 +22,7 @@ public class ShoppingListUseCases {
 	 *
 	 * @return the user's shopping list.
 	 */
-	public String printShoppingList() {
+	public String returnShoppingList() {
 		return this.shoppingList.toString();
 	}
 

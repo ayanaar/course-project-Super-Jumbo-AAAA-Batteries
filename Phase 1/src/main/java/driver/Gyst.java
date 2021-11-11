@@ -24,7 +24,7 @@ public class Gyst {
 		String mainMenuOption; 				// Option from main menu user chose
 		String name;					// Name of item
 		int quantity;					// Quantity of item
-		int expiryDate;					// Expiry date of item
+		String expiryDate;					// Expiry date of item
 		int index;					// Index of item in inventory/shopping list
 
 		System.out.println("*** Hello! Welcome to gyst! Hope you enjoy your stay. ***\n"); // Greet the user
@@ -58,7 +58,7 @@ public class Gyst {
 					System.out.print("Enter quantity: "); 					// Get quantity from user
 					quantity = Integer.parseInt(scanner.nextLine());
 					System.out.print("Enter expiry date (-1 if no expiry date): "); 	// Get expiry date from user
-					expiryDate = Integer.parseInt(scanner.nextLine());
+					expiryDate = scanner.nextLine();
 					listManager.addInventoryItem(name, quantity, expiryDate); 		// Add item to inventory
 					System.out.println("\nSuccessfully added " + quantity + " " + name + " to your inventory." + 
 							   "\nPress 'Enter' to return to Main Menu.");

@@ -26,7 +26,7 @@ public class ListManager {
 	 * @return the user's inventory.
 	 */
 	public String printInventory() {
-		return INVENTORY_USE_CASES.printInventory();
+		return INVENTORY_USE_CASES.returnInventory();
 	}
 
 	/**
@@ -35,10 +35,10 @@ public class ListManager {
 	 *
 	 * @param name          the name of the item being added.
 	 * @param quantity      the quantity of the item being added.
-	 * @param expiryDate    the expiry date of the item being added.
+	 * @param expiryDate    the expiry date of the item being added (YYYY-MM-DD).
 	 */
-	public void addInventoryItem(String name, int quantity, int expiryDate) {
-		if (expiryDate <= 0) {
+	public void addInventoryItem(String name, int quantity, String expiryDate) {
+		if (expiryDate.isEmpty()) {
 			// Item does not have an expiry date
 			INVENTORY_USE_CASES.addInventoryItem(name, quantity);
 		} else {
@@ -62,7 +62,7 @@ public class ListManager {
 	 * @return the user's shopping list.
 	 */
 	public String printShoppingList() {
-		return SHOPPING_LIST_USE_CASES.printShoppingList();
+		return SHOPPING_LIST_USE_CASES.returnShoppingList();
 	}
 
 	/**
