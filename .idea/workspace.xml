@@ -1,36 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="77456e14-7f31-42f1-be03-a91167771aea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/course-project-Super-Jumbo-AAAA-Batteries.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/crc_cards/controller/ListManager.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/crc_cards/driver/Gyst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/crc_cards/entities/FoodItem.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/crc_cards/entities/InventoryList.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/crc_cards/entities/Item.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/crc_cards/entities/ShoppingList.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/crc_cards/use_cases/InventoryUseCases.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/crc_cards/use_cases/ShoppingListUseCases.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/progress_report.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/main/java/controller/ListManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/main/java/driver/Gyst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/main/java/entities/FoodItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/main/java/entities/InventoryList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/main/java/entities/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/main/java/entities/ShoppingList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/main/java/use_cases/InventoryUseCases.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/main/java/use_cases/ShoppingListUseCases.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/test/java/FoodItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/skeleton_program/src/test/java/ItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/specification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase 1/Phase 0/walkthrough.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/course-project-Super-Jumbo-AAAA-Batteries.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/course-project-Super-Jumbo-AAAA-Batteries.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/Website/web.html" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/front_end/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/controller/ListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/controller/ListManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/driver/Gyst.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/driver/Gyst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/entities/FoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/FoodItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/entities/InventoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/InventoryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/entities/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/entities/ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/ShoppingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/use_cases/InventoryUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/InventoryUseCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/use_cases/ShoppingListUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/ShoppingListUseCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/test/java/DatabaseConnectionCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/DatabaseConnectionCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/test/java/FoodItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/FoodItemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/test/java/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/ItemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/walkthrough.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +28,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="20fJXKkGxIfU4jS0Vas0nyxmqKI" />
@@ -49,12 +44,44 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Phase 1" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alissa\source\course-project-Super-Jumbo-AAAA-Batteries\Phase 1" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jenni\OneDrive\Desktop\Uni\Second Year\Fall\CSC207\course-project-Super-Jumbo-AAAA-Batteries\Phase 1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Gyst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="driver.Gyst" />
+      <module name="course-project-Super-Jumbo-AAAA-Batteries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="driver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Gyst" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,8 +91,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636429751986</updated>
+      <workItem from="1636605654643" duration="5486000" />
+      <workItem from="1636611385216" duration="275000" />
+      <workItem from="1636611732675" duration="482000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

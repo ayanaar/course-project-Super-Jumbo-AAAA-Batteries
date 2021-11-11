@@ -4,6 +4,8 @@ import entities.InventoryList;
 import entities.Item;
 import entities.FoodItem;
 
+import java.time.LocalDate;
+
 
 /**
  * This class interacts with the inventory entities.
@@ -23,7 +25,7 @@ public class InventoryUseCases {
 	 *
 	 * @return the user's inventory.
 	 */
-	public String printInventory() {
+	public String returnInventory() {
 		return this.inventory.toString();
 	}
 
@@ -44,10 +46,10 @@ public class InventoryUseCases {
 	 *
 	 * @param name          the name of the item being added.
 	 * @param quantity      the quantity of the item being added.
-	 * @param expiryDate    the expiry date of the item being added.
+	 * @param expiryDate    the expiry date of the item being added (YYYY-MM-DD).
 	 */
-	public void addInventoryFoodItem(String name, int quantity, int expiryDate) {
-		Item item = new FoodItem(name, quantity, expiryDate);
+	public void addInventoryFoodItem(String name, int quantity, String expiryDate) {
+		Item item = new FoodItem(name, quantity, LocalDate.parse(expiryDate));
 		this.inventory.addItem(item);
 	}
 
