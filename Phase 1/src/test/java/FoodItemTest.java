@@ -16,7 +16,7 @@ public class FoodItemTest {
      */
     @Before
     public void setUp(){
-        foodItem = new FoodItem("bread", 99, 7);
+        foodItem = new FoodItem("bread", 99, 1);
     }
 
     /**

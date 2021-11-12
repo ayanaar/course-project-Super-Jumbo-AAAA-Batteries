@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class Gyst {
 	// The total number of main menu options
-	private final static int TOTAL_MAIN_MENU_OPTIONS = 7;
+	private final static int TOTAL_MAIN_MENU_OPTIONS = 8;
 
 	/**
 	 * This is the main method that runs the interaction between
@@ -105,6 +105,14 @@ public class Gyst {
 					scanner.nextLine();
 					break;
 
+
+				case "7": // User wants to save the lists for later use
+					listManager.saveLists();
+					System.out.println("\nSuccessfully saved the lists." +
+							"\nPress 'Enter' to return to Main Menu.");
+					scanner.nextLine();
+					break;
+
 				default: 	// User enters invalid input
 					System.out.println("Invalid. Please only enter a number 0 through " 
 							   + (Gyst.TOTAL_MAIN_MENU_OPTIONS - 1) + "." +
@@ -126,6 +134,7 @@ public class Gyst {
 		System.out.println("4. See shopping list");
 		System.out.println("5. Add an item to shopping list");
 		System.out.println("6. Remove an item from shopping list");
+		System.out.println("7. Save lists");
 	}
 }
 

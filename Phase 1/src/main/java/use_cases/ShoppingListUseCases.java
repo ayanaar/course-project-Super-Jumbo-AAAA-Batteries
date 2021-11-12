@@ -3,6 +3,9 @@ package use_cases;
 import entities.ShoppingList;
 import entities.Item;
 
+import java.io.File;
+import java.io.PrintWriter;
+
 
 /**
  * This class interacts with the shopping list entities.
@@ -44,5 +47,24 @@ public class ShoppingListUseCases {
 	 */
 	public void removeShoppingListItem(int index) {
 		this.shoppingList.removeItem(index);
+	}
+
+	/**
+	 * Save the shopping list to the csv file.
+	 *
+	 *
+	 */
+	public void saveShoppingList() {
+		try {
+			PrintWriter pw = new PrintWriter(new File("src/resources/shopping_list.csv"));
+			StringBuilder sb = this.shoppingList.toStringBuilder();
+
+			pw.write(sb.toString());
+			pw.close();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 	}
 }
