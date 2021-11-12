@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77456e14-7f31-42f1-be03-a91167771aea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/course-project-Super-Jumbo-AAAA-Batteries.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/course-project-Super-Jumbo-AAAA-Batteries.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/Website/web.html" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/front_end/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/controller/ListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/controller/ListManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/driver/Gyst.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/driver/Gyst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/entities/FoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/FoodItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/entities/InventoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/InventoryList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/entities/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/entities/ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/ShoppingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/use_cases/InventoryUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/InventoryUseCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/main/java/use_cases/ShoppingListUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/ShoppingListUseCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/test/java/DatabaseConnectionCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/DatabaseConnectionCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/test/java/FoodItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/FoodItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/skeleton_program/src/test/java/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/ItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/walkthrough.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/controller/ListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/controller/ListManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/driver/Gyst.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/driver/Gyst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/entities/InventoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/InventoryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/entities/ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/ShoppingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/InventoryUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/InventoryUseCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/ShoppingListUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/ShoppingListUseCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 1/src/test/java/FoodItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/FoodItemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +56,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Gyst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Gyst" type="Application" factoryName="Application" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="driver.Gyst" />
       <module name="course-project-Super-Jumbo-AAAA-Batteries" />
       <extension name="coverage">
@@ -94,6 +88,10 @@
       <workItem from="1636605654643" duration="5486000" />
       <workItem from="1636611385216" duration="275000" />
       <workItem from="1636611732675" duration="482000" />
+      <workItem from="1636665734378" duration="183000" />
+      <workItem from="1636665929571" duration="106000" />
+      <workItem from="1636666148382" duration="237000" />
+      <workItem from="1636666484521" duration="2035000" />
     </task>
     <servers />
   </component>

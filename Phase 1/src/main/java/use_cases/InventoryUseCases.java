@@ -6,6 +6,9 @@ import entities.FoodItem;
 
 import java.time.LocalDate;
 
+import java.io.File;
+import java.io.PrintWriter;
+
 
 /**
  * This class interacts with the inventory entities.
@@ -60,5 +63,23 @@ public class InventoryUseCases {
 	 */
 	public void removeInventoryItem(int index) {
 		this.inventory.removeItem(index);
+	}
+
+	/**
+	 * Save the inventory list to the csv file.
+	 *
+	 *
+	 */
+	public void saveInventoryList() {
+		try {
+			PrintWriter pw = new PrintWriter(new File("src/resources/inventory_list.csv"));
+			StringBuilder sb = this.inventory.toStringBuilder();
+
+			pw.write(sb.toString());
+			pw.close();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 }

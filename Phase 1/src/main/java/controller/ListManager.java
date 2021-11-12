@@ -21,6 +21,23 @@ public class ListManager {
 	}
 
 	/**
+	 * Return inventory use cases.
+	 * @return the inventory use cases.
+	 */
+	public InventoryUseCases getInventoryUseCases() {
+		return this.INVENTORY_USE_CASES;
+	}
+
+	/**
+	 * Return the shopping list use cases.
+	 * @return the shopping list use cases.
+	 */
+	public ShoppingListUseCases getShoppingListUseCases() {
+		return this.SHOPPING_LIST_USE_CASES;
+	}
+
+
+	/**
 	 * Return the user's inventory that will be printed to the user.
 	 *
 	 * @return the user's inventory.
@@ -82,5 +99,15 @@ public class ListManager {
 	 */
 	public void removeShoppingListItem(int index) {
 		SHOPPING_LIST_USE_CASES.removeShoppingListItem(index);
+	}
+
+
+
+	/**
+	 * Save both the inventory list and the shopping list for later use.
+	 */
+	public void saveLists() {
+		INVENTORY_USE_CASES.saveInventoryList();
+		SHOPPING_LIST_USE_CASES.saveShoppingList();
 	}
 }
