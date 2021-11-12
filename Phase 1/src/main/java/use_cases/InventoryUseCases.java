@@ -3,6 +3,8 @@ package use_cases;
 import entities.InventoryList;
 import entities.Item;
 import entities.FoodItem;
+import gateway.LoadingManager;
+import gateway.SavingManager;
 
 import java.time.LocalDate;
 
@@ -13,14 +15,14 @@ import java.io.PrintWriter;
 /**
  * This class interacts with the inventory entities.
  */
-public class InventoryUseCases {
+public class InventoryUseCases implements DataHandlingUseCase {
 	private final InventoryList inventory;
 
 	/**
 	 * Initialize an empty inventory.
 	 */
 	public InventoryUseCases() {
-		this.inventory = new InventoryList();
+		this.inventory = LoadingManager.InventoryListLoader();
 	}
 
 	/**
@@ -67,19 +69,8 @@ public class InventoryUseCases {
 
 	/**
 	 * Save the inventory list to the csv file.
-	 *
-	 *
 	 */
-	public void saveInventoryList() {
-		try {
-			PrintWriter pw = new PrintWriter(new File("src/resources/inventory_list.csv"));
-			StringBuilder sb = this.inventory.toStringBuilder();
-
-			pw.write(sb.toString());
-			pw.close();
-
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+	public void saveList() {
+		SavingManager.InventoryListSaver(this.inventory);
 	}
 }

@@ -101,13 +101,11 @@ public class ListManager {
 		SHOPPING_LIST_USE_CASES.removeShoppingListItem(index);
 	}
 
-
-
 	/**
 	 * Save both the inventory list and the shopping list for later use.
 	 */
 	public void saveLists() {
-		INVENTORY_USE_CASES.saveInventoryList();
-		SHOPPING_LIST_USE_CASES.saveShoppingList();
+		INVENTORY_USE_CASES.saveList();
+		SHOPPING_LIST_USE_CASES.saveList();
 	}
 }
