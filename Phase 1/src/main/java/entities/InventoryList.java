@@ -40,11 +40,11 @@ public class InventoryList {
 	 * Update the quantity of the item at the given index in the user's inventory.
 	 *
 	 * @param index       index of item being updated.
-	 * @param quantity     quantity of item being updated.
+	 * @param newAmount   addition amount being added to quantity.
 	 */
-	public void updateQuantity(int index, int quantity) {
+	public void updateQuantity(int index, int newAmount) {
 		Item item = this.INVENTORY.get(index);
-		item.updateQuantity(quantity);
+		item.updateQuantity(newAmount);
 	}
 
 	/**

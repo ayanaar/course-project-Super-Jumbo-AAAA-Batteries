@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 
 /**
+ * NOTE: This class is for demo purposes only. Will delete when not needed.
+ *
  * This Gyst class is the driver that interacts with the
  * user through the command line.
  */
