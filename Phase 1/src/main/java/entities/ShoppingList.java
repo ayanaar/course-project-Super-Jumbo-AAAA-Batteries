@@ -61,26 +61,17 @@ public class ShoppingList {
 	 */
 	public StringBuilder toStringBuilder() {
 		StringBuilder sb = new StringBuilder();
+		sb.append("index,item name,quantity\r\n");
+		Item item;
 
-		sb.append("index");
-		sb.append(",");
-		sb.append("item name");
-		sb.append(",");
-		sb.append("quantity");
-		sb.append("\r\n");
-
-		// Loop thorough each item in the shopping list
+		// Loop through each item in the inventory
 		for (int i = 0; i < this.SHOPPING_LIST.size(); i++) {
-			// Get the corresponding items corresponding values and assign an index
-			String itemIndex = String.valueOf(i);
-			String itemName = this.SHOPPING_LIST.get(i).getName();
-			String itemQuantity = String.valueOf(this.SHOPPING_LIST.get(i).getQuantity());
-			sb.append(itemIndex);
-			sb.append(",");
-			sb.append(itemName);
-			sb.append(",");
-			sb.append(itemQuantity);
-			sb.append("\r\n"); }
+			item = this.SHOPPING_LIST.get(i); // Get item
+			sb.append(i).append(","); // Add index
+			sb.append(item.getName()).append(",");  // Add item name
+			sb.append(item.getQuantity()).append(","); // Add quantity
+			sb.append("\r\n");
+		}
 
 		return sb;
 	}

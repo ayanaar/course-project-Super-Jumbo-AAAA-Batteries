@@ -1,13 +1,8 @@
 package use_cases;
 
-import entities.InventoryList;
 import entities.ShoppingList;
 import entities.Item;
-import gateway.LoadingManager;
 import gateway.SavingManager;
-
-import java.io.File;
-import java.io.PrintWriter;
 
 
 /**
@@ -20,7 +15,7 @@ public class ShoppingListUseCases implements DataHandlingUseCase {
 	 * Initialize an empty shopping list.
 	 */
 	public ShoppingListUseCases() {
-		this.shoppingList = LoadingManager.ShoppingListLoader();
+		this.shoppingList = new ShoppingList();
 	}
 
 	/**
@@ -56,6 +51,6 @@ public class ShoppingListUseCases implements DataHandlingUseCase {
 	 * Save the shopping list to the csv file.
 	 */
 	public void saveList() {
-		SavingManager.ShoppingListSaver(this.shoppingList);
+		SavingManager.ShoppingListSaver(this.shoppingList.toStringBuilder());
 	}
 }

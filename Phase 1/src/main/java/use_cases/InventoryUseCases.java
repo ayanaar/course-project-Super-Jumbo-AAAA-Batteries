@@ -3,13 +3,9 @@ package use_cases;
 import entities.InventoryList;
 import entities.Item;
 import entities.FoodItem;
-import gateway.LoadingManager;
 import gateway.SavingManager;
 
 import java.time.LocalDate;
-
-import java.io.File;
-import java.io.PrintWriter;
 
 
 /**
@@ -22,7 +18,7 @@ public class InventoryUseCases implements DataHandlingUseCase {
 	 * Initialize an empty inventory.
 	 */
 	public InventoryUseCases() {
-		this.inventory = LoadingManager.InventoryListLoader();
+		this.inventory = new InventoryList();
 	}
 
 	/**
@@ -35,26 +31,22 @@ public class InventoryUseCases implements DataHandlingUseCase {
 	}
 
 	/**
-	 * Add the given item (name and quantity) to the user's inventory.
-	 *
-	 * @param name          the name of the item being added.
-	 * @param quantity      the quantity of the item being added.
-	 */
-	public void addInventoryItem(String name, int quantity) {
-		Item item = new Item(name, quantity);
-		this.inventory.addItem(item);
-	}
-
-	/**
-	 * Add the given item (name, quantity, and expiry date) to the
-	 * user's inventory.
+	 * Add the given item (name, quantity, and expiry date, if applicable)
+	 * to the user's inventory.
 	 *
 	 * @param name          the name of the item being added.
 	 * @param quantity      the quantity of the item being added.
 	 * @param expiryDate    the expiry date of the item being added (YYYY-MM-DD).
 	 */
-	public void addInventoryFoodItem(String name, int quantity, String expiryDate) {
-		Item item = new FoodItem(name, quantity, LocalDate.parse(expiryDate));
+	public void addInventoryItem(String name, int quantity, String expiryDate) {
+		Item item;
+		if (expiryDate.isEmpty()) {
+			// Item does not have an expiry date
+			item = new Item(name, quantity);
+		} else {
+			// Item has an expiry date
+			item = new FoodItem(name, quantity, LocalDate.parse(expiryDate));
+		}
 		this.inventory.addItem(item);
 	}
 
@@ -71,6 +63,6 @@ public class InventoryUseCases implements DataHandlingUseCase {
 	 * Save the inventory list to the csv file.
 	 */
 	public void saveList() {
-		SavingManager.InventoryListSaver(this.inventory);
+		SavingManager.InventoryListSaver(this.inventory.toStringBuilder());
 	}
 }

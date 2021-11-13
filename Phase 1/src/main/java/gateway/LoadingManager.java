@@ -1,17 +1,12 @@
 package gateway;
 
-import entities.Item;
-import entities.FoodItem;
-import entities.InventoryList;
-import entities.ShoppingList;
 import use_cases.InventoryUseCases;
 import use_cases.ShoppingListUseCases;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.time.LocalDate;
 import java.util.Scanner;
+
 
 /**
  * This Class is an Interface Adapter that incorporates the methods that convert
@@ -19,60 +14,65 @@ import java.util.Scanner;
  * to external csv database.
  */
 public class LoadingManager {
+    private static final String INVENTORY_FILE_NAME = "src/resources/inventory_list.csv";
+    private static final String SHOPPING_LIST_FILE_NAME = "src/resources/shopping_list.csv";
 
     /**
-     * This is the method that converts the Inventory Lists to csv convertable format and
-     * runs the interaction between the use cases and the database.
+     * This is the method that converts the data in the csv file to an inventory list
+     * through the InventoryUseCases and runs the interaction between the use cases
+     * and the database.
      */
-    public static InventoryList InventoryListLoader() {
-        InventoryList inventoryList = new InventoryList();
-        String fileName = "src/resources/inventory_list.csv";
-        File file = new File(fileName);
+    public static InventoryUseCases InventoryListLoader() {
+        InventoryUseCases inventoryUseCases = new InventoryUseCases();
+        File file = new File(INVENTORY_FILE_NAME);
+
         try {
             Scanner inputStream = new Scanner(file);
             inputStream.nextLine();
+
+            // Loop until there are no more lines in the csv file
             while (inputStream.hasNext()) {
-                String data = inputStream.next();
-                String[] values = data.split(",");
-                String name = values[1];
-                int quantity = Integer.parseInt(values[2]);
-                LocalDate expiryDate = LocalDate.parse(values[3]);
-                FoodItem item = new FoodItem(name, quantity, expiryDate);
-                inventoryList.addItem(item);
+                String line = inputStream.next();
+                String[] values = line.split(","); // Split index, item name, quantity, expiry date
+                inventoryUseCases.addInventoryItem(values[1], Integer.parseInt(values[2]), values[3]); // Add item to inventory
             }
+
             inputStream.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        return inventoryList;
+
+        return inventoryUseCases;
     }
 
     /**
-     * This is the method that converts the Shopping Lists to csv convertable format and
-     * runs the interaction between the use cases and the database.
+     * This is the method that converts the data in the csv file to a shopping list
+     * through the ShoppingListUseCases and runs the interaction between the use cases
+     * and the database.
      */
-    public static ShoppingList ShoppingListLoader() {
-        ShoppingList shoppingList = new ShoppingList();
-        String fileName = "src/resources/shopping_list.csv";
-        File file = new File(fileName);
+    public static ShoppingListUseCases ShoppingListLoader() {
+        ShoppingListUseCases shoppingListUseCases = new ShoppingListUseCases();
+        File file = new File(SHOPPING_LIST_FILE_NAME);
+
         try {
             Scanner inputStream = new Scanner(file);
             inputStream.nextLine();
+
+            // Loop until there are no more lines in the csv file
             while (inputStream.hasNext()) {
-                String data = inputStream.next();
-                String[] values = data.split(",");
-                String name = values[1];
-                int quantity = Integer.parseInt(values[2]);
-                Item item = new Item(name, quantity);
-                shoppingList.addItem(item);
+                String line = inputStream.next();
+                String[] values = line.split(","); // Split index, item name, quantity
+                shoppingListUseCases.addShoppingListItem(values[1], Integer.parseInt(values[2])); // Add item to shopping list
             }
+
             inputStream.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        return shoppingList;
+
+        return shoppingListUseCases;
     }
 }
 

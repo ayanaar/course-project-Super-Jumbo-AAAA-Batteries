@@ -15,27 +15,10 @@ public class ListManager {
 	 * Initialize a ListManager by setting up the user's
 	 * inventory and shopping list.
 	 */
-	public ListManager() {
-		this.INVENTORY_USE_CASES = new InventoryUseCases();
-		this.SHOPPING_LIST_USE_CASES = new ShoppingListUseCases();
+	public ListManager(InventoryUseCases inventoryUseCases, ShoppingListUseCases shoppingListUseCases) {
+		this.INVENTORY_USE_CASES = inventoryUseCases;
+		this.SHOPPING_LIST_USE_CASES = shoppingListUseCases;
 	}
-
-	/**
-	 * Return inventory use cases.
-	 * @return the inventory use cases.
-	 */
-	public InventoryUseCases getInventoryUseCases() {
-		return this.INVENTORY_USE_CASES;
-	}
-
-	/**
-	 * Return the shopping list use cases.
-	 * @return the shopping list use cases.
-	 */
-	public ShoppingListUseCases getShoppingListUseCases() {
-		return this.SHOPPING_LIST_USE_CASES;
-	}
-
 
 	/**
 	 * Return the user's inventory that will be printed to the user.
@@ -55,13 +38,7 @@ public class ListManager {
 	 * @param expiryDate    the expiry date of the item being added (YYYY-MM-DD).
 	 */
 	public void addInventoryItem(String name, int quantity, String expiryDate) {
-		if (expiryDate.isEmpty()) {
-			// Item does not have an expiry date
-			INVENTORY_USE_CASES.addInventoryItem(name, quantity);
-		} else {
-			// Item has an expiry date
-			INVENTORY_USE_CASES.addInventoryFoodItem(name, quantity, expiryDate);
-		}
+		INVENTORY_USE_CASES.addInventoryItem(name, quantity, expiryDate);
 	}
 
 	/**
