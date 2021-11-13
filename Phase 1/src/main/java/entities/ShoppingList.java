@@ -69,7 +69,7 @@ public class ShoppingList {
 			item = this.SHOPPING_LIST.get(i); // Get item
 			sb.append(i).append(","); // Add index
 			sb.append(item.getName()).append(",");  // Add item name
-			sb.append(item.getQuantity()).append(","); // Add quantity
+			sb.append(item.getQuantity()); // Add quantity
 			sb.append("\r\n");
 		}
 
