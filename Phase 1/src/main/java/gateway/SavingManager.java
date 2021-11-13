@@ -1,13 +1,7 @@
 package gateway;
 
-
-import entities.InventoryList;
-import entities.ShoppingList;
-import use_cases.InventoryUseCases;
-import use_cases.ShoppingListUseCases;
-
-import java.io.File;
 import java.io.PrintWriter;
+
 
 /**
  * This Class is an Interface Adapter that incorporates the methods that convert
@@ -15,15 +9,16 @@ import java.io.PrintWriter;
  * to external csv database.
  */
 public class SavingManager {
+    private static final String INVENTORY_FILE_NAME = "src/resources/inventory_list.csv";
+    private static final String SHOPPING_LIST_FILE_NAME = "src/resources/shopping_list.csv";
 
     /**
      * This is the method that converts the Inventory Lists to csv convertable format and
      * runs the interaction between the use cases and the database.
      */
-    public static void InventoryListSaver(InventoryList inventoryList) {
-        StringBuilder sbInventoryList = inventoryList.toStringBuilder();
+    public static void InventoryListSaver(StringBuilder sbInventoryList) {
         try {
-            PrintWriter pw = new PrintWriter(new File("src/resources/inventory_list.csv"));
+            PrintWriter pw = new PrintWriter(INVENTORY_FILE_NAME);
 
             pw.write(sbInventoryList.toString());
             pw.close();
@@ -37,10 +32,9 @@ public class SavingManager {
      * This is the method that converts the Shopping Lists to csv convertable format and
      * runs the interaction between the use cases and the database.
      */
-    public static void ShoppingListSaver(ShoppingList shoppingList) {
-        StringBuilder sbShoppingList = shoppingList.toStringBuilder();
+    public static void ShoppingListSaver(StringBuilder sbShoppingList) {
         try {
-            PrintWriter pw = new PrintWriter(new File("src/resources/shopping_list.csv"));
+            PrintWriter pw = new PrintWriter(SHOPPING_LIST_FILE_NAME);
 
             pw.write(sbShoppingList.toString());
             pw.close();

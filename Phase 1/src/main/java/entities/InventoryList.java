@@ -1,6 +1,5 @@
 package entities;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,36 +72,22 @@ public class InventoryList {
 	 */
 	public StringBuilder toStringBuilder() {
 		StringBuilder sb = new StringBuilder();
+		sb.append("index,item name,quantity,expiry date\r\n");
+		Item item;
 
-		sb.append("index");
-		sb.append(",");
-		sb.append("item name");
-		sb.append(",");
-		sb.append("quantity");
-		sb.append(",");
-		sb.append("expiry date");
-		sb.append("\r\n");
-
-		// Loop thorough each item in the inventory
+		// Loop through each item in the inventory
 		for (int i = 0; i < this.INVENTORY.size(); i++) {
-			// Get the corresponding items corresponding values and assign an index
-			String itemIndex = String.valueOf(i);
-			String itemName = this.INVENTORY.get(i).getName();
-			String itemQuantity = String.valueOf(this.INVENTORY.get(i).getQuantity());
-			String itemExpiryDate;
-			if (this.INVENTORY.get(i) instanceof FoodItem) {
-				itemExpiryDate = (((FoodItem) this.INVENTORY.get(i)).getExpiryDate()).toString();
-			} else {
-				itemExpiryDate = "";
+			item = this.INVENTORY.get(i); // Get item
+			sb.append(i).append(","); // Add index
+			sb.append(item.getName()).append(",");  // Add item name
+			sb.append(item.getQuantity()).append(","); // Add quantity
+
+			if (item instanceof FoodItem) {
+				sb.append(((FoodItem) item).getExpiryDate()); // Add expiry date
 			}
-			sb.append(itemIndex);
-			sb.append(",");
-			sb.append(itemName);
-			sb.append(",");
-			sb.append(itemQuantity);
-			sb.append(",");
-			sb.append(itemExpiryDate);
-			sb.append("\r\n"); }
+
+			sb.append("\r\n");
+		}
 
 		return sb;
 	}

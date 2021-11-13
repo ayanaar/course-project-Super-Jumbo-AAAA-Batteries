@@ -1,6 +1,7 @@
 package driver;
 
 import controller.ListManager;
+import gateway.LoadingManager;
 
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public class Gyst {
 	 */
 	public static void main(String[] args) {
 		boolean isRunning = true;
-		ListManager listManager = new ListManager();
+		ListManager listManager = new ListManager(LoadingManager.InventoryListLoader(), LoadingManager.ShoppingListLoader());
 		Scanner scanner = new Scanner(System.in);
 		String mainMenuOption; 				// Option from main menu user chose
 		String name;					// Name of item
