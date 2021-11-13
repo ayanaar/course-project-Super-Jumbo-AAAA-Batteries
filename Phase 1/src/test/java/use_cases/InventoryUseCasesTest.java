@@ -5,23 +5,23 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+
+/**
+ * This class tests the InventoryUseCases class.
+ */
 public class InventoryUseCasesTest {
-    /**
-     * This class tests the InventoryUseCases class.
-     */
     InventoryUseCases inventory;
 
     /**
      * Set up for testing InventoryUseCases class.
      */
-
     @Before
     public void setUp() {
         inventory = new InventoryUseCases();
     }
 
     /**
-     * Test that the addInventoryItem() method returns the correct string representation.
+     * Test that the addInventoryItem() method adds the item to inventory correctly.
      */
     @Test(timeout = 100)
     public void testAddInventoryItem() {
@@ -32,7 +32,7 @@ public class InventoryUseCasesTest {
     }
 
     /**
-     * Test that the removeInventoryItem() method removes an item in the inventory successfully.
+     * Test that the removeInventoryItem() method removes an item in the inventory correctly.
      */
     @Test(timeout = 200)
     public void testRemoveInventoryItem() {

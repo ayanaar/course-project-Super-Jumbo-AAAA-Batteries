@@ -7,16 +7,16 @@ import use_cases.ShoppingListUseCases;
 
 import static org.junit.Assert.assertEquals;
 
+
+/**
+ * This class tests the ListManager class.
+ */
 public class ListManagerTest {
-    /**
-     * This class tests the ListManager class.
-     */
     ListManager listManager;
 
     /**
      * Set up for testing ListManager class.
      */
-
     @Before
     public void setUp() {
         InventoryUseCases inventoryUseCases = new InventoryUseCases();
@@ -25,7 +25,7 @@ public class ListManagerTest {
     }
 
     /**
-     * Test that the addInventoryItem() method returns the correct string representation.
+     * Test that the addInventoryItem() method adds the items to the inventory correctly.
      */
     @Test(timeout = 100)
     public void testAddInventoryItem() {
@@ -36,7 +36,7 @@ public class ListManagerTest {
     }
 
     /**
-     * Test that the removeInventoryItem() method returns the correct string representation.
+     * Test that the removeInventoryItem() method removes an item from the inventory correctly.
      */
     @Test(timeout = 100)
     public void testRemoveInventoryItem() {
@@ -56,7 +56,7 @@ public class ListManagerTest {
     }
 
     /**
-     * Test that the addShoppingListItem() method returns the correct string representation.
+     * Test that the addShoppingListItem() method adds the items to the shopping list correctly.
      */
     @Test(timeout = 100)
     public void testAddShoppingListItem() {
@@ -67,7 +67,7 @@ public class ListManagerTest {
     }
 
     /**
-     * Test that the removeShoppingListItem() method returns the correct string representation.
+     * Test that the removeShoppingListItem() method removes an item from the inventory correctly.
      */
     @Test(timeout = 100)
     public void testRemoveShoppingListItem() {
@@ -87,6 +87,4 @@ public class ListManagerTest {
         assertEquals("0. Name: detergent Quantity: 101\n" +
                 "1. Name: glue Quantity: 444", listManager.printShoppingList());
     }
-
-
 }
