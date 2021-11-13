@@ -62,4 +62,15 @@ public class InventoryListTest {
         inventory.updateQuantity(0, 100);
         assertEquals("0. Name: bread Quantity: 199 Expiry Date: 2021-12-10", inventory.toString());
     }
+
+    /**
+     * Test that the toStringBuilder() method returns the correct string representation.
+     */
+    @Test(timeout = 100)
+    public void testToStringBuilder() {
+        inventory.addItem(new FoodItem("bread", 99, LocalDate.parse("2022-10-03")));
+        inventory.addItem(new Item("toilet paper", 10));
+        assertEquals("index,item name,quantity,expiry date\r\n0,bread,99,2022-10-03\r\n1,toilet paper,10,\r\n",
+                inventory.toStringBuilder().toString());
+    }
 }
