@@ -48,7 +48,7 @@ public class Gyst {
 					System.out.println("\n*** Good-bye! Hope to see you again soon! ***");
 					break;
 
-				case "1": 	// User wants to see inˍˍventory
+				case "1": 	// User wants to see inventory
 					System.out.println("\n* Inventory *");				// Indicate to user that this is their inventory
 					System.out.println(listManager.printInventory()); 		// Display numbered list of inventory items
 					System.out.println("\nPress 'Enter' to return to Main Menu.");
