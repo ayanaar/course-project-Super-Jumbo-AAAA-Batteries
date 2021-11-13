@@ -1,4 +1,5 @@
 package use_cases;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,7 +30,6 @@ public class ShoppingListUseCasesTest {
         inventory.addShoppingListItem("glue", 444);
         assertEquals("0. Name: detergent Quantity: 101\n" +
                 "1. Name: glue Quantity: 444", inventory.returnShoppingList());
-
     }
 
     /**
@@ -41,6 +41,15 @@ public class ShoppingListUseCasesTest {
         inventory.addShoppingListItem("glue", 444);
         inventory.removeShoppingListItem(0);
         assertEquals("0. Name: glue Quantity: 444", inventory.returnShoppingList());
+    }
+
+    /**
+     * Test that the returnShoppingList() method returns the correct string representation.
+     */
+    @Test(timeout = 100)
+    public void testReturnShoppingList() {
+        inventory.addShoppingListItem("detergent", 101);
+        assertEquals("0. Name: detergent Quantity: 101", inventory.returnShoppingList());
     }
 }
 

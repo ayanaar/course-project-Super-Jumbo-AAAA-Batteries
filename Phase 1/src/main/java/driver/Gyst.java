@@ -60,7 +60,7 @@ public class Gyst {
 					name = scanner.nextLine();
 					System.out.print("Enter quantity: "); 					// Get quantity from user
 					quantity = Integer.parseInt(scanner.nextLine());
-					System.out.print("Enter expiry date (-1 if no expiry date): "); 	// Get expiry date from user
+					System.out.print("Enter expiry date (YYYY-MM-DD): "); 	// Get expiry date from user
 					expiryDate = scanner.nextLine();
 					listManager.addInventoryItem(name, quantity, expiryDate); 		// Add item to inventory
 					System.out.println("\nSuccessfully added " + quantity + " " + name + " to your inventory." + 

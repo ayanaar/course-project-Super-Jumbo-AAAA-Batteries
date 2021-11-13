@@ -33,7 +33,7 @@ public class LoadingManager {
             // Loop until there are no more lines in the csv file
             while (inputStream.hasNext()) {
                 String line = inputStream.next();
-                String[] values = line.split(","); // Split index, item name, quantity, expiry date
+                String[] values = line.split(",", 4); // Split index, item name, quantity, expiry date
                 inventoryUseCases.addInventoryItem(values[1], Integer.parseInt(values[2]), values[3]); // Add item to inventory
             }
 
