@@ -5,24 +5,23 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ShoppingListUseCasesTest {
 
-    /**
-     * This class tests the ShoppingListUseCases class.
-     */
+/**
+ * This class tests the ShoppingListUseCases class.
+ */
+public class ShoppingListUseCasesTest {
     ShoppingListUseCases inventory;
 
     /**
      * Set up for testing ShoppingListUseCases class.
      */
-
     @Before
     public void setUp() {
         inventory = new ShoppingListUseCases();
     }
 
     /**
-     * Test that the addShoppingListItem() method returns the correct string representation.
+     * Test that the addShoppingListItem() method adds an item to the inventory correctly.
      */
     @Test(timeout = 100)
     public void testAddShoppingListItem() {
@@ -33,7 +32,7 @@ public class ShoppingListUseCasesTest {
     }
 
     /**
-     * Test that the removeShoppingListItem() method removes an item in the inventory successfully.
+     * Test that the removeShoppingListItem() method removes an item in the inventory correctly.
      */
     @Test(timeout = 200)
     public void testRemoveShoppingListItem() {
@@ -52,5 +51,3 @@ public class ShoppingListUseCasesTest {
         assertEquals("0. Name: detergent Quantity: 101", inventory.returnShoppingList());
     }
 }
-
-
