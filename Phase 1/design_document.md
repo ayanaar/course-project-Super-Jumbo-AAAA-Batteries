@@ -30,10 +30,11 @@ Uncle Drew just came home from the grocery store. He bought 99 bananas and wants
 
 Now, the controller, ListManager, calls a method in the InventoryUseCases class to handle the addition of the item name, quantity, and expiry date to the inventory. This method creates an Item entity with the given item name, quantity and expiry date. Then, it calls a method in the entity, InventoryList, which adds the Item entity to the inventory list. The website is then updated to display Uncle Drew&#39;s updated inventory with the 99 bananas. Finally, Uncle Drew presses the &quot;Save&quot; button and the gateway, SavingManager, interacts with the InventoryUseCases and ShoppingListUseCases to save Uncle Drew&#39;s inventory and shopping list. Uncle Drew is satisfied and exits the website to go enjoy his 99 bananas.
 
+## 
 Our design followed the Clean Architecture principles. We designed _gyst_ so that the user interacts with the website. This ensures that the user can navigate through the inventory system easily, without directly interacting with the high level layer elements such as Entities.
 
 In addition, we implemented the use case classes under two categories: ShoppingListUseCases and InventoryListUseCases. If we were to complete the implementation through the classic use case class design, there would be duplicate methods that work in the same manner for both the shopping list and the inventory list. With this choice, first, the controller can directly refer to the corresponding list type. Then, the controller can call the method that is required for the specific use case to execute the use-case specific workflow.
-
+##
 The Dependency Rule is consistently followed when interacting with details in the outer layer. For example, when interacting with the database, only the gateways, LoadingManager and SavingManager, interact with the CSV files. These gateways also only interact with the use cases, InventoryUseCases and ShoppingListUseCases, in order to update or get data from the InventoryList and ShoppingList entities. The gateways do not interact with these entities directly.
 
 ## SOLID Principles
