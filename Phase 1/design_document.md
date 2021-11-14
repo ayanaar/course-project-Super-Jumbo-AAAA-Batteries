@@ -20,7 +20,7 @@ Another major design decision we came across along the way was whether or not to
 
 ## Clean Architecture
 
-![PHASE 1 UML](course-project-Super-Jumbo-AAAA-Batteries/Phase 1/uml_final.pdf)
+![PHASE 1 UML](https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/blob/main/Phase%201/uml_final.pdf)
 
 In the diagram above, we see where inheritance and interface implementation occurs in each layer. In the entities layer, we see that FoodItem is a child of Item, and it inherits all methods and attributes from the Item class. In the Use Cases layer, we can see that there is a DataHandlingUseCase interface that is implemented by the ShoppingListUseCases class and the InventoryUseCase class.
 
