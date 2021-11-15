@@ -3,10 +3,11 @@ Class name: ListManager
 
 Responsibilities:
 * Calls corresponding use case method(s) based on input from driver
-* Will include printing the inventory or shopping list
-* Will include adding an item to inventory or shopping list
-* Will include removing an item from inventory or shopping list
-* Will include moving an item from shopping list to inventory and vice versa 
+* Prints the inventory or shopping list
+* Adds an item to inventory or shopping list
+* Removes an item from inventory or shopping list
+* Will include moving an item from shopping list to inventory and vice versa
+* Saves inventory and shopping list for future use
 
 Collaborators:
 * InventoryUseCases

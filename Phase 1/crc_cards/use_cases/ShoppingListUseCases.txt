@@ -4,7 +4,9 @@ Class name: ShoppingListUseCases
 Responsibilities:
 * Update the user's shopping list by adding or removing items
 * Return a numbered list of shopping list items for printing to the user
+* Saves the shopping list for future use
 
 Collaborators:
 * Item
 * ShoppingList
+* SavingManager
