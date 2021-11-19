@@ -1,6 +1,6 @@
 # Course Project
 
-This is an inventory organization application currently being design and implemented by Ayanaa Rahman, Aamishi Avarsekar, Alissa Lozkhin, Jennifer Cao, Ali Keya, Samuel Shin. 
+This is an inventory organization application currently being designed and implemented by Ayanaa Rahman, Aamishi Avarsekar, Alissa Lozkhin, Jennifer Cao, Ali Keya, Samuel Shin. 
 
 
 
