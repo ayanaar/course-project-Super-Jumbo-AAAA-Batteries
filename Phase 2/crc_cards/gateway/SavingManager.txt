@@ -1,0 +1,12 @@
+Class name: SavingManager
+'Role': gateway
+
+Responsibilities:
+* converts data from the format suitable to uses cases and entities to the
+       * format suitable to external csv database.
+* converts the Inventory Lists and Shopping Lists to csv convertable format and
+       * runs the interaction between the use cases and the database.
+
+ Collaborators:
+ * InventoryUseCases
+ * ShoppingListUseCases

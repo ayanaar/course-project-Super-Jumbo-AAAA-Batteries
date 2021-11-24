@@ -1,0 +1,12 @@
+Class Name: ShoppingList
+'Role': Entity
+
+Responsibilities:
+* Store shopping list items in a list
+* Add an item to shopping list
+* Remove an item from shopping list
+* Will move an item from shopping list to inventory
+* Override toString method to print numbered list of shopping list items
+
+Collaborators: 
+* Item
