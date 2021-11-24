@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77456e14-7f31-42f1-be03-a91167771aea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/controller/ListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/controller/ListManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/driver/Gyst.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/driver/Gyst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/entities/InventoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/InventoryList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/entities/ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/ShoppingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/InventoryUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/InventoryUseCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/ShoppingListUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/ShoppingListUseCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/test/java/FoodItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/FoodItemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 2/new_file" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
