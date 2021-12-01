@@ -8,13 +8,13 @@ import java.util.ArrayList;
  * This class represents a user's shopping list.
  */
 public class ShoppingList {
-	private final List<Item> SHOPPING_LIST;
+	private final List<Item> shoppingList;
 
 	/**
 	 * Initialize a new empty shopping list.
 	 */
 	public ShoppingList() {
-		this.SHOPPING_LIST = new ArrayList<>();
+		this.shoppingList = new ArrayList<>();
 	}
 
 	/**
@@ -23,7 +23,7 @@ public class ShoppingList {
 	 * @param item the item being added to the shopping list.
 	 */
 	public void addItem(Item item) {
-		this.SHOPPING_LIST.add(item);
+		this.shoppingList.add(item);
 	}
 
 	/**
@@ -32,7 +32,7 @@ public class ShoppingList {
 	 * @param index the index of the item being removed.
 	 */
 	public void removeItem(int index) {
-		this.SHOPPING_LIST.remove(index);
+		this.shoppingList.remove(index);
 	}
 
 	/**
@@ -45,9 +45,9 @@ public class ShoppingList {
 		StringBuilder stringRepresentation = new StringBuilder();
 
 		// Loop thorough each item in the shopping list
-		for (int i = 0; i < this.SHOPPING_LIST.size(); i++) {
+		for (int i = 0; i < this.shoppingList.size(); i++) {
 			// Number each item 0, 1, 2, etc. + their string representation
-			String itemOption = i + ". " + this.SHOPPING_LIST.get(i).toString() + "\n";
+			String itemOption = i + ". " + this.shoppingList.get(i).toString() + "\n";
 			stringRepresentation.append(itemOption);   // Append item to shopping list representation
 		}
 
@@ -65,8 +65,8 @@ public class ShoppingList {
 		Item item;
 
 		// Loop through each item in the inventory
-		for (int i = 0; i < this.SHOPPING_LIST.size(); i++) {
-			item = this.SHOPPING_LIST.get(i); // Get item
+		for (int i = 0; i < this.shoppingList.size(); i++) {
+			item = this.shoppingList.get(i); // Get item
 			sb.append(i).append(","); // Add index
 			sb.append(item.getName()).append(",");  // Add item name
 			sb.append(item.getQuantity()); // Add quantity

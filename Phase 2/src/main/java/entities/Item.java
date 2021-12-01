@@ -5,7 +5,7 @@ package entities;
  * This class represents an item that has a name and quantity.
  */
 public class Item {
-	private final String NAME;
+	private final String name;
 	private int quantity;
 
 	/**
@@ -15,7 +15,7 @@ public class Item {
 	 * @param quantity 	quantity of item.
 	 */
 	public Item(String name, int quantity) {
-		this.NAME = name;
+		this.name = name;
 		this.quantity = quantity;
 	}	
 
@@ -25,7 +25,7 @@ public class Item {
 	 * @return name of the item.
 	 */
 	public String getName() {
-		return this.NAME;
+		return this.name;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class Item {
 	 */
 	@Override
 	public String toString() {
-		return "Name: " + this.NAME + " Quantity: " + this.quantity;
+		return "Name: " + this.name + " Quantity: " + this.quantity;
 	}
 }
   
