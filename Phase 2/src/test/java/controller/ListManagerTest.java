@@ -2,10 +2,9 @@ package controller;
 
 import org.junit.Before;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 import use_cases.InventoryUseCases;
 import use_cases.ShoppingListUseCases;
-
-import static org.junit.Assert.assertEquals;
 
 
 /**

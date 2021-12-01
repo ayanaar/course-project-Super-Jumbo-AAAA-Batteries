@@ -9,7 +9,7 @@ import java.time.temporal.ChronoUnit;
  * and expiry date.
  */
 public class FoodItem extends Item {
-	private final LocalDate EXPIRY_DATE;
+	private final LocalDate expiryDate;
 
 	/**
 	 * Initialize a FoodItem with the given name, quantity,
@@ -21,7 +21,7 @@ public class FoodItem extends Item {
 	 */
 	public FoodItem(String name, int quantity, LocalDate expiryDate) {
 		super(name, quantity);
-		this.EXPIRY_DATE = expiryDate;
+		this.expiryDate = expiryDate;
 	}
 
 	/**
@@ -30,7 +30,7 @@ public class FoodItem extends Item {
 	 * @return the expiry date of the food item.
 	 */
 	public LocalDate getExpiryDate() {
-		return this.EXPIRY_DATE;
+		return this.expiryDate;
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class FoodItem extends Item {
 	 */
 	public boolean compareExpiryDate(int days) {
 		LocalDate currentDate = LocalDate.now();
-		int difference = (int) currentDate.until(this.EXPIRY_DATE, ChronoUnit.DAYS);
+		int difference = (int) currentDate.until(this.expiryDate, ChronoUnit.DAYS);
 		return difference <= days;
 	}
 
@@ -54,6 +54,6 @@ public class FoodItem extends Item {
 	@Override
 	public String toString() {
 		return "Name: " + super.getName() + " Quantity: " + super.getQuantity() +
-			" Expiry Date: " + this.EXPIRY_DATE.toString();  // Expiry date has format YYYY-MM-DD
+			" Expiry Date: " + this.expiryDate.toString();  // Expiry date has format YYYY-MM-DD
 	}
 }
