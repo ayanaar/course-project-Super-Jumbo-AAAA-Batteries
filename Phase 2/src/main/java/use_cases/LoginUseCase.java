@@ -1,6 +1,7 @@
 package use_cases;
 import entities.UserList;
 import entities.User;
+import gateway.LoadingManager;
 import gateway.LoginInputBoundary;
 import gateway.UserReadWriter;
 
@@ -67,10 +68,20 @@ public class LoginUseCase implements LoginInputBoundary {
 
     /**
      * Creates a new UserList
-     * @return
+     * @return the new UserList object
      */
     public static UserList newUserList() {
         UserList users = new UserList();
+        return users;
+    }
+
+    /**
+     * Load and return the UserList from the corresponding csv file
+     * @return the loaded UserList object
+     */
+    public static UserList loadUserList(){
+        UserList users = new UserList();
+        LoadingManager.UserListLoader();
         return users;
     }
 }

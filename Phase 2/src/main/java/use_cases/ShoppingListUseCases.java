@@ -49,8 +49,10 @@ public class ShoppingListUseCases implements DataHandlingUseCase {
 
 	/**
 	 * Save the shopping list to the csv file.
+	 *
+	 * @param username the username of the user that program is handling the session of
 	 */
-	public void saveList() {
-		SavingManager.ShoppingListSaver(this.shoppingList.toStringBuilder());
+	public void saveList(String username) {
+		SavingManager.ShoppingListSaver(this.shoppingList.toStringBuilder(), username);
 	}
 }

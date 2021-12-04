@@ -22,8 +22,8 @@ public class Gyst {
 	 */
 	public static void main(String[] args) {
 		boolean isRunning = true;
-		LogInSystem.logInSys(); // this call initiates the login system
-		ListManager listManager = new ListManager(LoadingManager.InventoryListLoader(), LoadingManager.ShoppingListLoader());
+		String currentUser = LogInSystem.logInSys(); // this call initiates the login system
+		ListManager listManager = new ListManager(LoadingManager.InventoryListLoader(currentUser), LoadingManager.ShoppingListLoader(currentUser));
 		Scanner scanner = new Scanner(System.in);
 		String mainMenuOption; 				// Option from main menu user chose
 		String name;					// Name of item
@@ -111,7 +111,7 @@ public class Gyst {
 
 
 				case "7": // User wants to save the lists for later use
-					listManager.saveLists();
+					listManager.saveLists(currentUser);
 					System.out.println("\nSuccessfully saved the lists." +
 							"\nPress 'Enter' to return to Main Menu.");
 					scanner.nextLine();
