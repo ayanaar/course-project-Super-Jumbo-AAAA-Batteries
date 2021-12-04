@@ -1,7 +1,9 @@
 package driver;
 
+import com.sun.tools.javac.Main;
 import controller.ListManager;
 import gateway.LoadingManager;
+import login.driver.LogInSystem;
 
 import java.util.Scanner;
 
@@ -22,6 +24,7 @@ public class Gyst {
 	 */
 	public static void main(String[] args) {
 		boolean isRunning = true;
+		LogInSystem.logInSys(); // this call initiates the login system
 		ListManager listManager = new ListManager(LoadingManager.InventoryListLoader(), LoadingManager.ShoppingListLoader());
 		Scanner scanner = new Scanner(System.in);
 		String mainMenuOption; 				// Option from main menu user chose
