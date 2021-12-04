@@ -1,7 +1,7 @@
-package login.driver;
+package driver;
 
-import login.controller.LoginController;
-import login.CmdLineUI;
+import controller.LoginController;
+import driver.CmdLineUI;
 
 public class LogInSystem {
 

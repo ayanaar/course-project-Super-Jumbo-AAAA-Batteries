@@ -1,6 +1,6 @@
-package login;
+package driver;
 import java.util.Scanner;
-import login.controller.LoginController;
+import controller.LoginController;
 
 /**
  * A beautiful user interface for logging in.

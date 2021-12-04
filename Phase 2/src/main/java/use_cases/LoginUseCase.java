@@ -1,7 +1,8 @@
-package login.use_cases;
-import login.entities.UserList;
-import login.User;
-import login.gateway.*;
+package use_cases;
+import entities.UserList;
+import entities.User;
+import gateway.LoginInputBoundary;
+import gateway.UserReadWriter;
 
 import java.io.IOException;
 

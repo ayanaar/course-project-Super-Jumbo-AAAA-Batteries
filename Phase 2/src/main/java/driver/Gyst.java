@@ -1,9 +1,7 @@
 package driver;
 
-import com.sun.tools.javac.Main;
 import controller.ListManager;
 import gateway.LoadingManager;
-import login.driver.LogInSystem;
 
 import java.util.Scanner;
 

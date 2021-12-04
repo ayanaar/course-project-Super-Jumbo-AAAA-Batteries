@@ -1,5 +1,5 @@
-package login.gateway;
-import login.use_cases.LoginUseCase;
+package gateway;
+import use_cases.LoginUseCase;
 
 /**
  * The input boundary for the login use case.

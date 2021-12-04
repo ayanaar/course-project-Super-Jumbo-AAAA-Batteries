@@ -1,7 +1,7 @@
-package login.controller;
+package controller;
 
-import login.use_cases.LoginUseCase;
-import login.gateway.LoginInputBoundary;
+import use_cases.LoginUseCase;
+import gateway.LoginInputBoundary;
 
 /**
  * Controls the process for logging in.

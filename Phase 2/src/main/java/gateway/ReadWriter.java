@@ -1,6 +1,5 @@
-package login.gateway;
+package gateway;
 import java.io.IOException;
-import login.entities.UserList;
 
 public interface ReadWriter {
     /**
