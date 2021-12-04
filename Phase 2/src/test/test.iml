@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="PYTHON_MODULE" version="4">
-  <component name="NewModuleRootManager">
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Phase 1/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Phase 1/src/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/Phase 1/src/main" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Phase 2" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Phase 2/src/main/java/login_system" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/java" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -20,5 +17,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="main" scope="TEST" />
   </component>
 </module>
