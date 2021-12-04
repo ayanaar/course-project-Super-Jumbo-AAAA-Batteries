@@ -79,10 +79,12 @@ public class ListManager {
 	}
 
 	/**
-	 * Save both the inventory list and the shopping list for later use.
+	 * Save both the inventory list and the shopping list of the user for later use.
+	 *
+	 * @param user the username of the user that program is handling the session of
 	 */
-	public void saveLists() {
-		inventoryUseCases.saveList();
-		shoppingListUseCases.saveList();
+	public void saveLists(String user) {
+		inventoryUseCases.saveList(user);
+		shoppingListUseCases.saveList(user);
 	}
 }

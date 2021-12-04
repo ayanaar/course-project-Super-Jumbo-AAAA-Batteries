@@ -1,7 +1,7 @@
-package login.controller;
+package controller;
 
-import login.use_cases.LoginUseCase;
-import login.gateway.LoginInputBoundary;
+import use_cases.LoginUseCase;
+import gateway.LoginInputBoundary;
 
 /**
  * Controls the process for logging in.
@@ -29,7 +29,7 @@ public class LoginController {
      * @param username the username
      * @param password the password attempt
      */
-    public void runLogin(String username, String password) {
+    public String runLogin(String username, String password) {
         // Note: hands off the work to the use case class.
         LoginUseCase.LoginResult result = loginInputBoundary.logIn(username, password);
         switch (result) {
@@ -37,12 +37,13 @@ public class LoginController {
                 // Should we be printing? How might you refactor this program
                 // to fit the Clean Architecture?
                 // TODO: change this
-                System.out.println("Success!");
-                break;
+                System.out.println("Success! Welcome, " + username + "!");
+                return username;
             case FAILURE:
                 System.out.println("Failed to login!");
-                break;
+                return "";
         }
+        return null;
     }
 
     public static void addingUser(String username, String password) {
@@ -52,6 +53,8 @@ public class LoginController {
     public static void creatingUserList() {
         LoginUseCase.newUserList();
     }
+
+    public static void loadingUserList() {LoginUseCase.loadUserList();}
 
     public static LoginUseCase creatingUseCase() {
         LoginUseCase useCase = new LoginUseCase();

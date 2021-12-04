@@ -1,4 +1,4 @@
-package login;
+package entities;
 import java.io.Serializable;
 
 /**

@@ -1,8 +1,8 @@
-package login.entities;
+package entities;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import login.User;
+import entities.User;
 
 /**
  * A map of username —> User object.

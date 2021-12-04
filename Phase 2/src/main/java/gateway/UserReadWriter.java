@@ -1,7 +1,7 @@
-package login.gateway;
+package gateway;
+import gateway.ReadWriter;
+
 import java.io.*;
-import login.gateway.ReadWriter;
-import login.entities.UserList;
 
 
 public class UserReadWriter implements ReadWriter {

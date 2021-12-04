@@ -8,5 +8,5 @@ interface DataHandlingUseCase {
     /**
      * This method is for saving the current state of the list.
      */
-    void saveList();
+    void saveList(String user);
 }
