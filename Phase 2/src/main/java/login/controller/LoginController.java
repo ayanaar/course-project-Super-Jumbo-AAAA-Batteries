@@ -34,9 +34,10 @@ public class LoginController {
         LoginUseCase.LoginResult result = loginInputBoundary.logIn(username, password);
         switch (result) {
             case SUCCESS:
-                // Should we be printing? How might you refactor this program
-                // to fit the Clean Architecture?
-                // TODO: change this
+//                // Should we be printing? How might you refactor this program
+//                // to fit the Clean Architecture?
+//                // TODO: change this
+//                return "Success";
                 System.out.println("Success!");
                 break;
             case FAILURE:
