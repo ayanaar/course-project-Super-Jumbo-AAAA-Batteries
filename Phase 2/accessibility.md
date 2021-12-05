@@ -1,4 +1,4 @@
-##Project Accessibility Report
+# Project Accessibility Report #
 
 **1. Describe features that we could implement in the future that would adhere to principles.**
 
@@ -19,7 +19,7 @@ Principle 3: Simple and Intuitive Use
 Principle 4: Perceptible Information
 * Make the font on the website legible
 * Use colours on the website that cater to everyone (i.e, account for colourblind individuals)
-* Make a pop*up with pictures that explains key steps in using our website in addition to a help menu
+* Make a pop-up with pictures that explains key steps in using our website in addition to a help menu
 
 Principle 5: Tolerance for Error
 * Implementing an "undo" feature on our website that allows the user to correct mistakes without any consequence (i.e, if they enter the wrong number or quantity of item).
