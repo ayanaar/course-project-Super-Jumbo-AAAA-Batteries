@@ -13,6 +13,7 @@ public class LoginUseCase implements LoginInputBoundary {
      * A list of users organized by username.
      */
     private final UserList users;
+    UserReadWriter readWriter = new UserReadWriter();
 
     /**
      * Serializes and deserializes list of users
@@ -21,6 +22,8 @@ public class LoginUseCase implements LoginInputBoundary {
         this.users = new UserList();
     }
 
+<<<<<<< HEAD:Phase 2/src/main/java/login/use_cases/LoginUseCase.java
+=======
     /**
      * Creates a new UserList
      * @return the new UserList object
@@ -29,6 +32,7 @@ public class LoginUseCase implements LoginInputBoundary {
         return new UserList();
     }
 
+>>>>>>> 18173ae8825a0a5d967074b228f174b7a3ea60e4:Phase 2/src/main/java/use_cases/LoginUseCase.java
     /**
      * / The "output" of this use case.
      */
