@@ -1,4 +1,4 @@
-package controller;
+package controllers;
 
 import use_cases.InventoryUseCases;
 import use_cases.ShoppingListUseCases;
