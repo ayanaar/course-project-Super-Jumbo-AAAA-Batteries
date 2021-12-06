@@ -1,9 +1,0 @@
-Class name: DataHandlingUseCase
-'Role': Use Case
-
-Responsibilities:
-* Interface for InventoryLists and ShoppingLists that can save data to the database
-* Saves the current state of the list
-
-Collaborators:
-*
