@@ -13,8 +13,7 @@
 3. [Design Nuances](#design-nuances)
     1. [Design Patterns](#design-patterns)
 4. [Code Organization](#organization)
-    1. [Packaging Strategies](#package)![141663572-04f7cb01-ae35-42c3-8ada-8d6aa204b1c7](https://user-images.githubusercontent.com/37850012/144795822-1e93f79b-a5cf-4896-86d0-23dd1a470421.png)
-
+    1. [Packaging Strategies](#package)
     2. [Use of GitHub Features](#github)
 5. [Progress Report](#progress)
     1. [What Worked Well with Our Design](#worked-well)
@@ -124,6 +123,7 @@ Since our UI decision was Web App using HTML and CSS, everytime we made changes 
 ### 5.3 Significant Pull Requests  <a name="pull-requests"></a>
 
 - Ayanaa: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/37
+    
 I think this demonstrates a significant contribution to the team because testing our code is very important to do, in order to ensure that our user authentication system is working as expected. Additionally, I made some changes to the log-in use case and controller to alter the existing code from the lecture to fit our specification and project better. 
 
 - Jennifer: <insert link>
@@ -134,6 +134,7 @@ In this pull request, I implemented the strategy design pattern. I think this de
 - Ali: 
 
 - Aamishi: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/33 
+    
 Before this pull request, our project was using a command-line interface to interact with our application, gyst. This pull request changes our project’s UI from a CLI to a web-app. The web-app has a landing login page that lets users to type in their username and password and login to gyst to see their Inventory and Shopping List. From there we are sent to the main part of the gyst web application. Here, users can add and save their items to the Inventory and Shopping List. The design of the website is made to be accessible with readable fonts and font sizes. 
 
 - Sam: 
