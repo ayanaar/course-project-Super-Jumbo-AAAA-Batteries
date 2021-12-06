@@ -3,6 +3,8 @@ package use_cases;
 import entities.ShoppingList;
 import entities.Item;
 import gateway.SavingManager;
+import helpers.Sorter;
+import helpers.TimSorter;
 
 
 /**
@@ -15,7 +17,8 @@ public class ShoppingListUseCases implements DataHandlingUseCase {
 	 * Initialize an empty shopping list.
 	 */
 	public ShoppingListUseCases() {
-		this.shoppingList = new ShoppingList();
+		Sorter<Item> sorter = new TimSorter<>();
+		this.shoppingList = new ShoppingList(sorter);
 	}
 
 	/**
@@ -45,6 +48,13 @@ public class ShoppingListUseCases implements DataHandlingUseCase {
 	 */
 	public void removeShoppingListItem(int index) {
 		this.shoppingList.removeItem(index);
+	}
+
+	/**
+	 * Sort the shopping list items.
+	 */
+	public void sortShoppingList() {
+		this.shoppingList.sortItems();
 	}
 
 	/**

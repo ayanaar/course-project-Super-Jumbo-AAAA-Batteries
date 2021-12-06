@@ -7,7 +7,7 @@ import java.time.LocalDate;
  * This class represents a food item that has a name, quantity
  * and expiry date.
  */
-public class FoodItem extends Item {
+public class FoodItem extends Item implements Comparable<Item> {
 	private final LocalDate expiryDate;
 
 	/**
@@ -30,6 +30,22 @@ public class FoodItem extends Item {
 	 */
 	public LocalDate getExpiryDate() {
 		return this.expiryDate;
+	}
+
+	/**
+	 * Compare this food item with the given item.
+	 *
+	 * @param item the item being compared to.
+	 * @return the result of the comparison
+	 */
+	@Override
+	public int compareTo(Item item) {
+		if (item instanceof FoodItem) {
+			return this.expiryDate.compareTo(((FoodItem) item).expiryDate);  // Used to sort by expiry date
+		} else {
+			// FoodItem always comes before Item
+			return -1;  // Negative number means this FoodItem comes before given Item
+		}
 	}
 
 	/**

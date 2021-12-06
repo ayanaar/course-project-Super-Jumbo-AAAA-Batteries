@@ -4,6 +4,8 @@ import entities.InventoryList;
 import entities.Item;
 import entities.FoodItem;
 import gateway.SavingManager;
+import helpers.Sorter;
+import helpers.TimSorter;
 
 import java.time.LocalDate;
 
@@ -18,7 +20,8 @@ public class InventoryUseCases implements DataHandlingUseCase {
 	 * Initialize an empty inventory.
 	 */
 	public InventoryUseCases() {
-		this.inventory = new InventoryList();
+		Sorter<Item> sorter = new TimSorter<>();
+		this.inventory = new InventoryList(sorter);
 	}
 
 	/**
@@ -57,6 +60,13 @@ public class InventoryUseCases implements DataHandlingUseCase {
 	 */
 	public void removeInventoryItem(int index) {
 		this.inventory.removeItem(index);
+	}
+
+	/**
+	 * Sort the inventory items.
+	 */
+	public void sortInventory() {
+		this.inventory.sortItems();
 	}
 
 	/**

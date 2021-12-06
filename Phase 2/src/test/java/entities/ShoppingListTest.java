@@ -1,5 +1,8 @@
 package entities;
 
+import helpers.Sorter;
+import helpers.TimSorter;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +20,8 @@ public class ShoppingListTest {
      */
     @Before
     public void setUp() {
-        shoppingList = new ShoppingList();
+        Sorter<Item> sorter = new TimSorter<>();
+        shoppingList = new ShoppingList(sorter);
     }
 
     /**
@@ -69,5 +73,19 @@ public class ShoppingListTest {
         shoppingList.addItem(new Item("toilet paper", 10));
         shoppingList.removeItem(0);
         assertEquals("0. Name: toilet paper Quantity: 10", shoppingList.toString());
+    }
+
+    /**
+     * Test that the sortItems() method sorts in the items in the shopping list successfully.
+     */
+    @Test(timeout = 200)
+    public void testSortItems() {
+        shoppingList.addItem(new Item("b", 101));
+        shoppingList.addItem(new Item("c", 123));
+        shoppingList.addItem(new Item("a", 444));
+        shoppingList.sortItems();
+        assertEquals("0. Name: a Quantity: 444\n" +
+                "1. Name: b Quantity: 101\n" +
+                "2. Name: c Quantity: 123", shoppingList.toString());
     }
 }

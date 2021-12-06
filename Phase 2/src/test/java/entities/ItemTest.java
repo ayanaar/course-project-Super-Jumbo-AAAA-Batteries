@@ -3,6 +3,9 @@ package entities;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 import static org.junit.Assert.assertEquals;
 
 
@@ -43,6 +46,26 @@ public class ItemTest {
     public void testUpdateQuantity() {
         item.updateQuantity(10);
         assertEquals(109, item.getQuantity());
+    }
+
+    /**
+     * Test that the compareTo() method returns the correct output
+     * when comparing to Item.
+     */
+    @Test(timeout = 100)
+    public void testCompareToItem() {
+        assertEquals("toilet paper".compareTo("banana"),
+                item.compareTo(new Item("banana", 12)));
+    }
+
+    /**
+     * Test that the compareTo() method returns the correct output
+     * when comparing to FoodItem.
+     */
+    @Test(timeout = 100)
+    public void testCompareToFoodItem() {
+        assertEquals(1, item.compareTo(
+                new FoodItem("banana", 12, LocalDate.parse("2020-12-12"))));
     }
 
     /**

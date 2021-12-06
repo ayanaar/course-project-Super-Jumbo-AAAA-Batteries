@@ -79,6 +79,14 @@ public class ListManager {
 	}
 
 	/**
+	 * Sort the inventory and shopping lists.
+	 */
+	public void sortLists() {
+		inventoryUseCases.sortInventory();
+		shoppingListUseCases.sortShoppingList();
+	}
+
+	/**
 	 * Save both the inventory list and the shopping list of the user for later use.
 	 *
 	 * @param user the username of the user that program is handling the session of

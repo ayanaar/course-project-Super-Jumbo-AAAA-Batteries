@@ -4,7 +4,7 @@ package entities;
 /**
  * This class represents an item that has a name and quantity.
  */
-public class Item {
+public class Item implements Comparable<Item> {
 	private final String name;
 	private int quantity;
 
@@ -44,6 +44,22 @@ public class Item {
 	 */
 	public void updateQuantity(int newAmount) {
 		this.quantity += newAmount;
+	}
+
+	/**
+	 * Compare this item with the given item.
+	 *
+	 * @param item the item being compared to.
+	 * @return the result of the comparison
+	 */
+	@Override
+	public int compareTo(Item item) {
+		if (item instanceof FoodItem) {
+			// FoodItem always comes before Item
+			return 1; // Positive number means given FoodItem comes before this Item
+		} else {
+			return this.name.compareTo(item.name);  // Used to sort alphabetically by name
+		}
 	}
 
 	/**
