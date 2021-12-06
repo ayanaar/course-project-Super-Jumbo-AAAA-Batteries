@@ -3,22 +3,22 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-    1. [Specification](#specification)
-    2. [Changes from Phase 1 to Phase 2](#changes)
+   1. [Specification](#specification)
+   2. [Changes from Phase 1 to Phase 2](#changes)
 2. [Implementation](#implementation)
-    1. [Clean Architecture](#clean-architecture)
-    2. [Scenario Walkthrough](#scenario)
-    3. [SOLID Principles](#solid)
-    4. [Major Design Decisions](#major)
+   1. [Clean Architecture](#clean-architecture)
+   2. [Scenario Walkthrough](#scenario)
+   3. [SOLID Principles](#solid)
+   4. [Major Design Decisions](#major)
 3. [Design Nuances](#design-nuances)
-    1. [Design Patterns](#design-patterns)
+   1. [Design Patterns](#design-patterns)
 4. [Code Organization](#organization)
-    1. [Packaging Strategies](#package)
-    2. [Use of GitHub Features](#github)
+   1. [Packaging Strategies](#package)
+   2. [Use of GitHub Features](#github)
 5. [Progress Report](#progress)
-    1. [What Worked Well with Our Design](#worked-well)
-    2. [Author Details](#author)
-    3. [Significant Pull Requests](#pull-requests)
+   1. [What Worked Well with Our Design](#worked-well)
+   2. [Author Details](#author)
+   3. [Significant Pull Requests](#pull-requests)
 
 
 ## 1 Introduction <a name="introduction"></a>
@@ -28,7 +28,7 @@ _gyst_ is a web application that organizes your household inventory and assists 
 
 ### 1.2 Changes from Phase 1 to Phase 2 <a name="changes"></a>
 
-In phase 2, we added entities, use cases, a controller, and unit tests for user authentication. We also updated our data persistence/serialization (via CSV files) accordingly by saving user information and the user’s corresponding inventory and shopping list. 
+In phase 2, we added entities, use cases, a controller, and unit tests for user authentication. We also updated our data persistence/serialization (via CSV files) accordingly by saving user information and the user’s corresponding inventory and shopping list.
 
 In phase 1, we did not have the website connected to our Java code yet. In phase 2, we were able to connect the program to the website. We also added the user authentication to the website and connected it to the relevant Java code.
 
@@ -41,7 +41,7 @@ In phase 2, we also did some refactoring. For example, most noticeably, we added
 
 ![image](https://user-images.githubusercontent.com/76668055/141663572-04f7cb01-ae35-42c3-8ada-8d6aa204b1c7.png)
 
-In the diagram above, we see where inheritance and interface implementation occurs in each layer. In the entities layer, we see that FoodItem is a child of Item, and it inherits all methods and attributes from the Item class. In the Use Cases layer, we can see that there is a DataHandlingUseCase interface that is implemented by the ShoppingListUseCases class and the InventoryUseCase class. 
+In the diagram above, we see where inheritance and interface implementation occurs in each layer. In the entities layer, we see that FoodItem is a child of Item, and it inherits all methods and attributes from the Item class. In the Use Cases layer, we can see that there is a DataHandlingUseCase interface that is implemented by the ShoppingListUseCases class and the InventoryUseCase class.
 
 Our design followed the Clean Architecture principles. We designed _gyst_ so that the user interacts with the website. This ensures that the user can navigate through the inventory system easily, without directly interacting with the high level layer elements such as Entities.
 
@@ -69,9 +69,9 @@ Our design adheres to the interface segregation principle. For example, we have 
 
 ### 2.4 Major Design Decisions <a name="major"></a>
 
-We started the second phase of the project by planning to use databases for serialization purposes. Yet, on our way, due to unexpected costs and infeasibilities we had to switch to local csv serialization. This transition came with a dilemma. If we were to update the data source automatically at each change of the properties of the program (InventoryLists and ShoppingLists), we would need to iterate through each line of the csv files to save, process and retrieve data at each call of inventory/shopping list updating methods. On a larger scale, this would require more and more computing power and slow down the process of interacting with the data source. We solved this issue by letting the user save changes after each session, which made the gateway classes make changes on the data source only when the user wants to save the progress/changes. When the program is initialized for the first time, the template csv is loaded to the inventory list and the shopping list. After a series of changes executed by the user, the user can choose/press save. Receiving the save command from the user, the system transfers the data stored in the entities to a parallel csv file and writes it on the template csv files provided in the resources folder.
+Our serialization for Phase 1 was suitable for a single user only. For this phase, we updated our serialization system to store inventory lists and shopping lists of multiple users for later reference. For such extensions to the gateway classes, we had two options: Our first option was to store all of the inventory and shopping list items at a single CSV file through cross-matching the user information to specific entries of the item list. The second option was to separate the user-specific data into user-specific storage folders. For the implementation of the first option, we needed to store the inventory lists and shopping lists as entries to a column of the CSV file. Yet, since our inventory lists and shopping lists are relatively complex data structures(at least more complex than tuples of two elements), it needed a second layer of conversion from the CSV file to the InventoryList and ShoppingList objects. If we were to use a database management system, this process would be relatively fast. Yet, we have implemented a local serialization system. Therefore, we decided that providing user-specific folders to our system would be faster than the first option. All in all, we ended up implementing the system to create and sustain the data through a user-specific data storage system.
 
-Another major design decision we came across along the way was whether or not to create concrete class implementations for the gateway layer (interface adapters). Consequently, it led to the discussion of the possibility of changing the location of the instances of the use cases. Our first implementation for the loading and saving functionalities was through a series of methods defined under use case classes and the controller class. After long debates regarding the formation of concrete gateway classes, we decided to create separate gateway classes in order to adhere to clean architecture principles and follow the diagram presented in the Web App Tutorial for handling requests with the presence of gateway. With the help of the creation of gateway classes, our structure perfectly fits the clean architecture principles.
+Another major design decision we had to make was regarding an earlier topic introduced in the course, "Inheritance vs Interface". After we received feedback from our TA regarding defining an abstract class for our classes InventoryList and ShoppingList, we started debating over whether to implement an abstract class for our classes or to define an interface that both classes implement. Though the initial advice was to create abstract classes, we decided to go with the interface implementation since InventoryLists store items with the allowance of entering expiry dates while ShoppingLists does not allow an expiry date for a member Item object. With this, we have methods in both these classes that share the same purpose yet differentiate in terms of their explicit implementation and use cases.
 
 
 ## 3 Design Nuances <a name="design-nuances"></a>
@@ -81,10 +81,12 @@ Our group implemented the dependency injection design pattern. For example, when
 
 We also implemented the private class data design pattern in many different classes. The point of this design pattern was to reduce the exposure of instance variables by limiting their visibility outside of the class. This way, these variables cannot be randomly changed without the class’ “permission.” For example, the Item entity class has private name and quantity instance variables so that other classes cannot access them and possibly change them to an unexpected value.
 
+Script: A third design pattern we implemented is the strategy design pattern. We created two helper classes, a Sorter interface and a TimSorter class. These classes are used to sort the InventoryList entity items by expiry date or alphabetically by name if the item does not have an expiry date. The same applies to the ShoppingList entity. The Item and FoodItem entities implement the Comparable interface and the compareTo() method. We sort the inventory and shopping list every time the user saves. Overall, the user can easily see the items closest to expiration at the front of the inventory list.
+
 A third design pattern we implemented is the strategy design pattern. We created two helper classes, a Sorter<T> interface with a sort() method and a TimSorter<T> class that implements this interface. The TimSorter class sorts a List<T>, which we will specifically use to sort the InventoryList items by expiry date (i.e., item closest to expiration). If an item does not have an expiration date, it is sorted alphabetically by name. The ShoppingList items are also sorted alphabetically by name. In order to sort these items, the entities, Item and FoodItem, implement the Comparable<Item> interface, which has the compareTo() method. Two FoodItems will compare expiry dates and two Items will compare their names. When comparing a FoodItem to an Item, the FoodItem always comes first. Overall, the inventory is sorted so that the items closest to expiration are at the front of the inventory list for the user to see easily. Similarly, the shopping list is sorted alphabetically so that the user can find the items easily.
 
 
-## 4 Code Organization <a name="organization"></a> 
+## 4 Code Organization <a name="organization"></a>
 ### 4.1 Packaging Strategies <a name="package"></a>
 
 The packaging strategies we considered were packaging by layer versus packing by feature. If we packaged by feature, we would group classes related to inventory together and classes related to shopping list together. However, there are common classes between inventory and shopping list such as the Item class. We found packaging by layer intuitively easier to understand as the layers of clean architecture are clearer to us. Therefore, we packaged by layer.
@@ -92,9 +94,9 @@ The packaging strategies we considered were packaging by layer versus packing by
 
 ### 4.2 Use of Github Features  <a name="github"></a>
 
-We have used a variety of Github features to complete Phase 2 of our project. Each group member created their own local repository by cloning the remote one, and they updated their local repository by performing the "git pull" function (either from IntelliJ or from Git Bash). Each group member had their own branch, where they pushed code and other work that they did on the project. Whenever a member completed their tasks, they pushed their work onto their local branch, and then they made a pull request. After creating this request, we looked at the work and decided whether to merge it into the main branch. 
+We have used a variety of Github features to complete Phase 2 of our project. Each group member created their own local repository by cloning the remote one, and they updated their local repository by performing the "git pull" function (either from IntelliJ or from Git Bash). Each group member had their own branch, where they pushed code and other work that they did on the project. Whenever a member completed their tasks, they pushed their work onto their local branch, and then they made a pull request. After creating this request, we looked at the work and decided whether to merge it into the main branch.
 
-Since our UI decision was Web App using HTML and CSS, everytime we made changes to our code we had to reopen the new raw version of our HTML file directly from GitHub and get the source code to open it on a browser again. To save time in doing this, we tried to use the action tab feature on GitHub by setting up a new workflow that allows us to view the updated HTML on our repo directly. We manage to retrieve the URL link to the updated HTML by searching through the template marketplace from GitHub and applying the appropriate code. 
+Since our UI decision was Web App using HTML and CSS, everytime we made changes to our code we had to reopen the new raw version of our HTML file directly from GitHub and get the source code to open it on a browser again. To save time in doing this, we tried to use the action tab feature on GitHub by setting up a new workflow that allows us to view the updated HTML on our repo directly. We manage to retrieve the URL link to the updated HTML by searching through the template marketplace from GitHub and applying the appropriate code.
 
 
 ## 5 Progress Report <a name="progress"></a>
@@ -112,7 +114,7 @@ Since our UI decision was Web App using HTML and CSS, everytime we made changes 
 
 - Jennifer: Implemented the strategy design pattern to sort the items in inventory and shopping list. Created an interface for the common methods of InventoryList and ShoppingList entities. Refactored code, such as moving the toStringBuilder() method from the entity layer to the use case layer. Assisted with project accessibility report and design document.
 
-- Alissa: Assisted with the creation of use cases and entities for user authentication, unit tests for authentication. Assisted with project accessibility report and design document. Also assisted in the development of the login system. 
+- Alissa: Assisted with the creation of use cases and entities for user authentication, unit tests for authentication. Assisted with project accessibility report and design document. Also assisted in the development of the login system.
 
 - Ali: Updated data persistence/serialization (via CSV files) to save user information and the user’s corresponding inventory and shopping lists. Assisted with project accessibility report and design document.
 
@@ -122,22 +124,20 @@ Since our UI decision was Web App using HTML and CSS, everytime we made changes 
 
 ### 5.3 Significant Pull Requests  <a name="pull-requests"></a>
 
-### 5.3 Significant Pull Requests  <a name="pull-requests"></a>
-
 - Ayanaa: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/37
 
 I think this demonstrates a significant contribution to the team because testing our code is very important to do, in order to ensure that our user authentication system is working as expected. Additionally, I made some changes and assisted with the implementation of the log-in use case and controller which is a significant aspect of our project and scope.
 
 - Jennifer: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/44
 
-- https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/46
+
+https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/46
 
 In this pull request, I implemented the strategy design pattern (second link contains the new classes that weren’t included in the first pull request). I think this demonstrates a significant contribution to the team because this pattern is used to sort the items in a user’s inventory and shopping list (by expiry date and/or alphabetically). This way, the user can easily see which items are the closest to expiration and find the item(s) they’re looking for easily. This pull request also incorporates much of what we learned about design patterns, interfaces, generics, and comparing objects using Comparable<T> and compareTo().
 
+- Alissa: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/42
 
-- Alissa: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/42 
-
-In this pull request, I added new features to the login system. This feature included exiting the program if incorrect credentials were inputted, which is essential to the functionality of our login system. As well, while I modified most of the code before so that it adheres to Clean Architecture, in this commit, I modified it further so that only the driver (not the controller) prints output. 
+In this pull request, I added new features to the login system. This feature included exiting the program if incorrect credentials were inputted, which is essential to the functionality of our login system. As well, while I modified most of the code before so that it adheres to Clean Architecture, in this commit, I modified it further so that only the driver (not the controller) prints output.
 
 - Ali:
   https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/32
