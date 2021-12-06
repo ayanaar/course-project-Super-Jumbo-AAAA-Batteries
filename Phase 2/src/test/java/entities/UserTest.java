@@ -9,7 +9,6 @@ import static org.junit.Assert.*;
 /**
  * This class tests the User class.
  */
-
 public class UserTest {
     User user;
 
