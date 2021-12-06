@@ -8,13 +8,13 @@ import java.util.List;
  * This class represents a user's inventory.
  */
 public class InventoryList {
-	private final List<Item> INVENTORY;
+	private final List<Item> inventory;
 
 	/**
 	 * Initialize an empty inventory.
 	 */
 	public InventoryList() {
-		this.INVENTORY = new ArrayList<>();
+		this.inventory = new ArrayList<>();
 	}
 
 	/**
@@ -23,7 +23,7 @@ public class InventoryList {
 	 * @param item the item being added to the user's inventory.
 	 */
 	public void addItem(Item item) {
-		this.INVENTORY.add(item);
+		this.inventory.add(item);
 	}
 
 	/**
@@ -32,7 +32,7 @@ public class InventoryList {
 	 * @param index the index of the  item to be removed.
 	 */
 	public void removeItem(int index) {
-		this.INVENTORY.remove(index);
+		this.inventory.remove(index);
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class InventoryList {
 	 * @param newAmount   addition amount being added to quantity.
 	 */
 	public void updateQuantity(int index, int newAmount) {
-		Item item = this.INVENTORY.get(index);
+		Item item = this.inventory.get(index);
 		item.updateQuantity(newAmount);
 	}
 
@@ -56,9 +56,9 @@ public class InventoryList {
 		StringBuilder stringRepresentation = new StringBuilder();
 
 		// Loop thorough each item in the inventory
-		for (int i = 0; i < this.INVENTORY.size(); i++) {
+		for (int i = 0; i < this.inventory.size(); i++) {
 			// Number each item 0, 1, 2, etc. + their string representation
-			String itemOption = i + ". " + this.INVENTORY.get(i).toString() + "\n";
+			String itemOption = i + ". " + this.inventory.get(i).toString() + "\n";
 			stringRepresentation.append(itemOption);   // Append item to inventory representation
 		}
 
@@ -76,8 +76,8 @@ public class InventoryList {
 		Item item;
 
 		// Loop through each item in the inventory
-		for (int i = 0; i < this.INVENTORY.size(); i++) {
-			item = this.INVENTORY.get(i); // Get item
+		for (int i = 0; i < this.inventory.size(); i++) {
+			item = this.inventory.get(i); // Get item
 			sb.append(i).append(","); // Add index
 			sb.append(item.getName()).append(",");  // Add item name
 			sb.append(item.getQuantity()).append(","); // Add quantity

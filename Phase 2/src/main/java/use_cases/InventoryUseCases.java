@@ -61,8 +61,10 @@ public class InventoryUseCases implements DataHandlingUseCase {
 
 	/**
 	 * Save the inventory list to the csv file.
+	 *
+	 * @param username the username of the user that program is handling the session of
 	 */
-	public void saveList() {
-		SavingManager.InventoryListSaver(this.inventory.toStringBuilder());
+	public void saveList(String username) {
+		SavingManager.InventoryListSaver(this.inventory.toStringBuilder(), username);
 	}
 }

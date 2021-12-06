@@ -1,0 +1,98 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> gyst </title>
+    <link rel="stylesheet" href="gystStyle.css">
+</head>
+<body>
+<main>
+    <div class="header">
+        <h1><i>gyst</i></h1>
+        <h3>Organisation? You get the <i>gyst</i>.</h3>
+    </div>
+
+    <div class="saveState">
+        <input type="submit" value="Save!"/>
+    </div>
+
+    <div class="lists">
+        <section class="glassInv">
+            <div class="Inventory">
+                <h2>Inventory</h2>
+                <legend>Item Information*:</legend>
+                <label>
+                    <input type="text" placeholder="Item Name*">
+                </label>
+                <label>
+                    <input type="number" placeholder="Quantity*">
+                </label>
+                <legend>Date of Expiry*:</legend>
+                <label>
+                    <input type="date" placeholder="Date of Expiry*">
+                </label>
+
+                <div class="b1">
+                    <button type="button">Add item</button>
+                </div>
+
+                <legend>Item #*:</legend>
+                <label>
+                    <input type="number" required>
+                </label>
+
+                <div class="b2">
+                    <button>Remove item</button>
+                </div>
+
+
+                <ol>Inventory
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="glassSL">
+            <div class="Inventory">
+                <h2>Shopping List</h2>
+                <legend>Item Information*:</legend>
+                <label>
+                    <input type="text" placeholder="Item Name*">
+                </label>
+                <label>
+                    <input type="number" placeholder="Quantity*">
+                </label>
+                <legend>Date of Expiry*:</legend>
+                <label>
+                    <input type="date" placeholder="Date of Expiry*">
+                </label>
+
+                <div class="b3">
+                    <button type="button">Add item</button>
+                </div>
+
+                <legend>Item #*:</legend>
+                <label>
+                    <input type="number" required>
+                </label>
+                <div class="b4">
+                    <button>Remove item</button>
+                </div>
+                <ol>Inventory
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+    <div class="logout">
+        <form id="login-form" method="GET" action="loginPage.html">
+            <input type="submit" value="Log out"/>
+        </form>
+    </div>
+</main>
+</body>
+</html>
