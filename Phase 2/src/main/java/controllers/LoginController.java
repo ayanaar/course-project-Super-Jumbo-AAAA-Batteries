@@ -29,30 +29,22 @@ public class LoginController {
      * @param username the username
      * @param password the password attempt
      */
-    public String runLogin(String username, String password) {
+    public String[] runLogin(String username, String password) {
         // Note: hands off the work to the use case class.
         LoginUseCase.LoginResult result = loginInputBoundary.logIn(username, password);
+        String[] array = new String[2];
         switch (result) {
             case SUCCESS:
-<<<<<<< HEAD:Phase 2/src/main/java/login/controller/LoginController.java
-//                // Should we be printing? How might you refactor this program
-//                // to fit the Clean Architecture?
-//                // TODO: change this
-//                return "Success";
-                System.out.println("Success!");
-                break;
-=======
-                // Should we be printing? How might you refactor this program
-                // to fit the Clean Architecture?
                 // TODO: change this
-                System.out.println("Success! Welcome, " + username + "!");
-                return username;
->>>>>>> 18173ae8825a0a5d967074b228f174b7a3ea60e4:Phase 2/src/main/java/controllers/LoginController.java
+//                System.out.println("Success! Welcome, " + username + "!")
+                array = new String[] {username, "Success"};
+                return array;
             case FAILURE:
-                System.out.println("Failed to login!");
-                return "";
+//                System.out.println("Failed to login!");
+                array = new String[] {username, "Failed"};
+                return array;
         }
-        return null;
+        return array;
     }
 
     public static void addingUser(String username, String password) {
