@@ -1,5 +1,7 @@
 package entities;
 
+import helpers.Sorter;
+import helpers.TimSorter;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +21,26 @@ public class InventoryListTest {
      */
     @Before
     public void setUp() {
-        inventory = new InventoryList();
+        Sorter<Item> sorter = new TimSorter<>();
+        inventory = new InventoryList(sorter);
+    }
+
+    /**
+     * Test that the getSize() method returns the correct size of the inventory.
+     */
+    @Test(timeout = 100)
+    public void testGetSize() {
+        assertEquals(0, inventory.getSize());
+    }
+
+    /**
+     * Test that the getItem() method returns the correct item from the inventory.
+     */
+    @Test(timeout = 100)
+    public void testGetItem() {
+        Item item = new FoodItem("bread", 99, LocalDate.parse("2021-12-10"));
+        inventory.addItem(item);
+        assertEquals(item, inventory.getItem(0));
     }
 
     /**
@@ -54,23 +75,16 @@ public class InventoryListTest {
     }
 
     /**
-     * Test that the updateQuantity() method updates the quantity of an item to the correct number.
+     * Test that the sortItems() method sorts in the items in the inventory successfully.
      */
     @Test(timeout = 200)
-    public void testUpdateQuantity() {
-        inventory.addItem(new FoodItem("bread", 99, LocalDate.parse("2021-12-10")));
-        inventory.updateQuantity(0, 100);
-        assertEquals("0. Name: bread Quantity: 199 Expiry Date: 2021-12-10", inventory.toString());
-    }
-
-    /**
-     * Test that the toStringBuilder() method returns the correct string representation.
-     */
-    @Test(timeout = 100)
-    public void testToStringBuilder() {
-        inventory.addItem(new FoodItem("bread", 99, LocalDate.parse("2022-10-03")));
-        inventory.addItem(new Item("toilet paper", 10));
-        assertEquals("index,item name,quantity,expiry date\r\n0,bread,99,2022-10-03\r\n1,toilet paper,10,\r\n",
-                inventory.toStringBuilder().toString());
+    public void testSortItems() {
+        inventory.addItem(new FoodItem("b", 101, LocalDate.parse("2021-12-10")));
+        inventory.addItem(new FoodItem("c", 444, LocalDate.parse("2021-12-11")));
+        inventory.addItem(new Item("a", 123));
+        inventory.sortItems();
+        assertEquals("0. Name: b Quantity: 101 Expiry Date: 2021-12-10\n" +
+                "1. Name: c Quantity: 444 Expiry Date: 2021-12-11\n" +
+                "2. Name: a Quantity: 123", inventory.toString());
     }
 }

@@ -1,6 +1,6 @@
 package driver;
 
-import controller.ListManager;
+import controllers.ListManager;
 import gateway.LoadingManager;
 
 import java.util.Scanner;
@@ -111,6 +111,7 @@ public class Gyst {
 
 
 				case "7": // User wants to save the lists for later use
+					listManager.sortLists();
 					listManager.saveLists(currentUser);
 					System.out.println("\nSuccessfully saved the lists." +
 							"\nPress 'Enter' to return to Main Menu.");

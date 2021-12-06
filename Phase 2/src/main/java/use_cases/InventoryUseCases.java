@@ -4,6 +4,8 @@ import entities.InventoryList;
 import entities.Item;
 import entities.FoodItem;
 import gateway.SavingManager;
+import helpers.Sorter;
+import helpers.TimSorter;
 
 import java.time.LocalDate;
 
@@ -18,7 +20,8 @@ public class InventoryUseCases implements DataHandlingUseCase {
 	 * Initialize an empty inventory.
 	 */
 	public InventoryUseCases() {
-		this.inventory = new InventoryList();
+		Sorter<Item> sorter = new TimSorter<>();
+		this.inventory = new InventoryList(sorter);
 	}
 
 	/**
@@ -60,11 +63,45 @@ public class InventoryUseCases implements DataHandlingUseCase {
 	}
 
 	/**
+	 * Sort the inventory items.
+	 */
+	public void sortInventory() {
+		this.inventory.sortItems();
+	}
+
+	/**
 	 * Save the inventory list to the csv file.
 	 *
 	 * @param username the username of the user that program is handling the session of
 	 */
 	public void saveList(String username) {
-		SavingManager.InventoryListSaver(this.inventory.toStringBuilder(), username);
+		SavingManager.InventoryListSaver(this.toStringBuilder(), username);
+	}
+
+	/**
+	 * Return a string representation of the user's inventory.
+	 *
+	 * @return a string representation of the user's inventory.
+	 */
+	private StringBuilder toStringBuilder() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("index,item name,quantity,expiry date\r\n");
+		Item item;
+
+		// Loop through each item in the inventory
+		for (int i = 0; i < this.inventory.getSize(); i++) {
+			item = this.inventory.getItem(i); // Get item
+			sb.append(i).append(","); // Add index
+			sb.append(item.getName()).append(",");  // Add item name
+			sb.append(item.getQuantity()).append(","); // Add quantity
+
+			if (item instanceof FoodItem) {
+				sb.append(((FoodItem) item).getExpiryDate()); // Add expiry date
+			}
+
+			sb.append("\r\n");
+		}
+
+		return sb;
 	}
 }

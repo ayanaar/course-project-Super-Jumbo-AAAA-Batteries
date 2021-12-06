@@ -1,14 +1,13 @@
 package entities;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 
 /**
  * This class represents a food item that has a name, quantity
  * and expiry date.
  */
-public class FoodItem extends Item {
+public class FoodItem extends Item implements Comparable<Item> {
 	private final LocalDate expiryDate;
 
 	/**
@@ -34,16 +33,19 @@ public class FoodItem extends Item {
 	}
 
 	/**
-	 * Return true if the number of days until the food item's expiry date
-	 * is less than or equal to the given number of days.
+	 * Compare this food item with the given item.
 	 *
-	 * @param days the number of days being compared to
-	 * @return true if the number of days until expiry date <= days
+	 * @param item the item being compared to.
+	 * @return the result of the comparison
 	 */
-	public boolean compareExpiryDate(int days) {
-		LocalDate currentDate = LocalDate.now();
-		int difference = (int) currentDate.until(this.expiryDate, ChronoUnit.DAYS);
-		return difference <= days;
+	@Override
+	public int compareTo(Item item) {
+		if (item instanceof FoodItem) {
+			return this.expiryDate.compareTo(((FoodItem) item).expiryDate);  // Used to sort by expiry date
+		} else {
+			// FoodItem always comes before Item
+			return -1;  // Negative number means this FoodItem comes before given Item
+		}
 	}
 
 	/**

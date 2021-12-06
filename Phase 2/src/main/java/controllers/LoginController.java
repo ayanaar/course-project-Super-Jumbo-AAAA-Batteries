@@ -1,4 +1,4 @@
-package controller;
+package controllers;
 
 import use_cases.LoginUseCase;
 import gateway.LoginInputBoundary;
@@ -29,35 +29,31 @@ public class LoginController {
      * @param username the username
      * @param password the password attempt
      */
-    public String runLogin(String username, String password) {
+    public String[] runLogin(String username, String password) {
         // Note: hands off the work to the use case class.
         LoginUseCase.LoginResult result = loginInputBoundary.logIn(username, password);
+        String[] array = new String[2];
         switch (result) {
             case SUCCESS:
-                // Should we be printing? How might you refactor this program
-                // to fit the Clean Architecture?
                 // TODO: change this
-                System.out.println("Success! Welcome, " + username + "!");
-                return username;
+//                System.out.println("Success! Welcome, " + username + "!")
+                array = new String[] {username, "Success"};
+                return array;
             case FAILURE:
-                System.out.println("Failed to login!");
-                return "";
+//                System.out.println("Failed to login!");
+                array = new String[] {username, "Failed"};
+                return array;
         }
-        return null;
+        return array;
     }
 
     public static void addingUser(String username, String password) {
         LoginUseCase.addUser(username, password);
     }
 
-    public static void creatingUserList() {
-        LoginUseCase.newUserList();
-    }
-
     public static void loadingUserList() {LoginUseCase.loadUserList();}
 
     public static LoginUseCase creatingUseCase() {
-        LoginUseCase useCase = new LoginUseCase();
-        return useCase;
+        return new LoginUseCase();
     }
 }

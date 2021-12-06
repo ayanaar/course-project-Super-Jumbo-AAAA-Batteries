@@ -13,6 +13,7 @@ public class LoginUseCase implements LoginInputBoundary {
      * A list of users organized by username.
      */
     private final UserList users;
+    UserReadWriter readWriter = new UserReadWriter();
 
     /**
      * Serializes and deserializes list of users
@@ -21,8 +22,17 @@ public class LoginUseCase implements LoginInputBoundary {
         this.users = new UserList();
     }
 
-    UserReadWriter readWriter = new UserReadWriter();
+<<<<<<< HEAD:Phase 2/src/main/java/login/use_cases/LoginUseCase.java
+=======
+    /**
+     * Creates a new UserList
+     * @return the new UserList object
+     */
+    public static UserList newUserList() {
+        return new UserList();
+    }
 
+>>>>>>> 18173ae8825a0a5d967074b228f174b7a3ea60e4:Phase 2/src/main/java/use_cases/LoginUseCase.java
     /**
      * / The "output" of this use case.
      */
@@ -30,15 +40,6 @@ public class LoginUseCase implements LoginInputBoundary {
     // information to the controller.
     public enum LoginResult {
         SUCCESS, FAILURE
-    }
-
-    public LoginUseCase(UserList users) {
-        this.users = users;
-        try {
-            readWriter.saveToFile("users.ser", users);
-        } catch (IOException e) {
-            System.out.println("User list did not save.");
-        }
     }
 
     /**
@@ -49,7 +50,7 @@ public class LoginUseCase implements LoginInputBoundary {
      */
     public LoginResult logIn(String username, String password) {
         User user = users.getUser(username);
-        if (user.passwordMatches(password)) {
+        if (user != null && user.passwordMatches(password)) {
             return LoginResult.SUCCESS;
         } else {
             return LoginResult.FAILURE;
@@ -64,15 +65,6 @@ public class LoginUseCase implements LoginInputBoundary {
     public static void addUser(String username, String password) {
         User user = new User(username, password);
         UserList.add(user);
-    }
-
-    /**
-     * Creates a new UserList
-     * @return the new UserList object
-     */
-    public static UserList newUserList() {
-        UserList users = new UserList();
-        return users;
     }
 
     /**

@@ -1,4 +1,4 @@
-package controller;
+package controllers;
 
 import use_cases.InventoryUseCases;
 import use_cases.ShoppingListUseCases;
@@ -76,6 +76,14 @@ public class ListManager {
 	 */
 	public void removeShoppingListItem(int index) {
 		shoppingListUseCases.removeShoppingListItem(index);
+	}
+
+	/**
+	 * Sort the inventory and shopping lists.
+	 */
+	public void sortLists() {
+		inventoryUseCases.sortInventory();
+		shoppingListUseCases.sortShoppingList();
 	}
 
 	/**

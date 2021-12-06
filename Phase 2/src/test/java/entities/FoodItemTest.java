@@ -7,8 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -37,21 +35,22 @@ public class FoodItemTest {
     }
 
     /**
-     * Test that the compareExpiryDate() method returns false.
+     * Test that the compareTo() method returns the correct output
+     * when comparing to Item.
      */
     @Test(timeout = 100)
-    public void testCompareExpiryDateFalse() {
-        // Check if expiry date is within 7 days of today
-        assertFalse(foodItem.compareExpiryDate(7));
+    public void testCompareToItem() {
+        assertEquals(-1, foodItem.compareTo(new Item("banana", 12)));
     }
 
     /**
-     * Test that the compareExpiryDate() method returns true.
+     * Test that the compareTo() method returns the correct output
+     * when comparing to FoodItem.
      */
     @Test(timeout = 100)
-    public void testCompareExpiryDateTrue() {
-        // Check if expiry date is within 10 days of today
-        assertTrue(foodItem.compareExpiryDate(10));
+    public void testCompareToFoodItem() {
+        assertEquals(2, foodItem.compareTo(
+                new FoodItem("banana", 12, expiryDate.minus(2, ChronoUnit.DAYS))));
     }
 
     /**
