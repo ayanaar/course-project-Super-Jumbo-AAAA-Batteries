@@ -50,14 +50,9 @@ public class LoginController {
         LoginUseCase.addUser(username, password);
     }
 
-    public static void creatingUserList() {
-        LoginUseCase.newUserList();
-    }
-
     public static void loadingUserList() {LoginUseCase.loadUserList();}
 
     public static LoginUseCase creatingUseCase() {
-        LoginUseCase useCase = new LoginUseCase();
-        return useCase;
+        return new LoginUseCase();
     }
 }
