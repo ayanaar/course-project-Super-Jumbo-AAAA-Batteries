@@ -53,6 +53,29 @@ public class ShoppingListUseCases implements DataHandlingUseCase {
 	 * @param username the username of the user that program is handling the session of
 	 */
 	public void saveList(String username) {
-		SavingManager.ShoppingListSaver(this.shoppingList.toStringBuilder(), username);
+		SavingManager.ShoppingListSaver(this.toStringBuilder(), username);
+	}
+
+
+	/**
+	 * Return a string representation of the user's shopping list.
+	 *
+	 * @return a string representation of the user's shopping list.
+	 */
+	private StringBuilder toStringBuilder() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("index,item name,quantity\r\n");
+		Item item;
+
+		// Loop through each item in the inventory
+		for (int i = 0; i < this.shoppingList.getSize(); i++) {
+			item = this.shoppingList.getItem(i); // Get item
+			sb.append(i).append(","); // Add index
+			sb.append(item.getName()).append(",");  // Add item name
+			sb.append(item.getQuantity()); // Add quantity
+			sb.append("\r\n");
+		}
+
+		return sb;
 	}
 }
