@@ -21,6 +21,26 @@ public class ShoppingListTest {
     }
 
     /**
+     * Test that the getSize() method returns the correct size of
+     * the shopping list.
+     */
+    @Test(timeout = 100)
+    public void testGetSize() {
+        assertEquals(0, shoppingList.getSize());
+    }
+
+    /**
+     * Test that the getItem() method returns the correct item from
+     * the shopping list.
+     */
+    @Test(timeout = 100)
+    public void testGetItem() {
+        Item item = new Item("bread", 99);
+        shoppingList.addItem(item);
+        assertEquals(item, shoppingList.getItem(0));
+    }
+
+    /**
      * Test that the toString() method returns the correct string representation.
      */
     @Test(timeout = 100)
@@ -49,16 +69,5 @@ public class ShoppingListTest {
         shoppingList.addItem(new Item("toilet paper", 10));
         shoppingList.removeItem(0);
         assertEquals("0. Name: toilet paper Quantity: 10", shoppingList.toString());
-    }
-
-    /**
-     * Test that the toStringBuilder() method returns the correct string representation.
-     */
-    @Test(timeout = 100)
-    public void testToStringBuilder() {
-        shoppingList.addItem(new Item("bread", 99));
-        shoppingList.addItem(new Item("toilet paper", 10));
-        assertEquals("index,item name,quantity\r\n0,bread,99\r\n1,toilet paper,10\r\n",
-                shoppingList.toStringBuilder().toString());
     }
 }

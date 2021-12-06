@@ -37,24 +37,6 @@ public class FoodItemTest {
     }
 
     /**
-     * Test that the compareExpiryDate() method returns false.
-     */
-    @Test(timeout = 100)
-    public void testCompareExpiryDateFalse() {
-        // Check if expiry date is within 7 days of today
-        assertFalse(foodItem.compareExpiryDate(7));
-    }
-
-    /**
-     * Test that the compareExpiryDate() method returns true.
-     */
-    @Test(timeout = 100)
-    public void testCompareExpiryDateTrue() {
-        // Check if expiry date is within 10 days of today
-        assertTrue(foodItem.compareExpiryDate(10));
-    }
-
-    /**
      * Test that the toString() method returns the expected string representation.
      */
     @Test(timeout = 100)

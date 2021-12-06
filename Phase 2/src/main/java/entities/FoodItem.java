@@ -1,7 +1,6 @@
 package entities;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 
 /**
@@ -31,19 +30,6 @@ public class FoodItem extends Item {
 	 */
 	public LocalDate getExpiryDate() {
 		return this.expiryDate;
-	}
-
-	/**
-	 * Return true if the number of days until the food item's expiry date
-	 * is less than or equal to the given number of days.
-	 *
-	 * @param days the number of days being compared to
-	 * @return true if the number of days until expiry date <= days
-	 */
-	public boolean compareExpiryDate(int days) {
-		LocalDate currentDate = LocalDate.now();
-		int difference = (int) currentDate.until(this.expiryDate, ChronoUnit.DAYS);
-		return difference <= days;
 	}
 
 	/**
