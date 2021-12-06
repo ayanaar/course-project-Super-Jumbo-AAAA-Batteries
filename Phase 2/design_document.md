@@ -122,19 +122,30 @@ Since our UI decision was Web App using HTML and CSS, everytime we made changes 
 
 ### 5.3 Significant Pull Requests  <a name="pull-requests"></a>
 
+### 5.3 Significant Pull Requests  <a name="pull-requests"></a>
+
 - Ayanaa: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/37
-    
-I think this demonstrates a significant contribution to the team because testing our code is very important to do, in order to ensure that our user authentication system is working as expected. Additionally, I made some changes to the log-in use case and controller to alter the existing code from the lecture to fit our specification and project better. 
 
-- Jennifer: <insert link>
-In this pull request, I implemented the strategy design pattern. I think this demonstrates a significant contribution to the team because this pattern is used to sort the items in a user’s inventory and shopping list (by expiry date and/or alphabetically). This way, the user can easily see which items are the closest to expiration and find the item(s) they’re looking for easily. This pull request also incorporates much of what we learned about design patterns, interfaces, and comparing objects using Comparable<T> and compareTo().
+I think this demonstrates a significant contribution to the team because testing our code is very important to do, in order to ensure that our user authentication system is working as expected. Additionally, I made some changes and assisted with the implementation of the log-in use case and controller which is a significant aspect of our project and scope.
 
-- Alissa:  
+- Jennifer: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/44
 
-- Ali: 
+- https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/46
 
-- Aamishi: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/33 
-    
-Before this pull request, our project was using a command-line interface to interact with our application, gyst. This pull request changes our project’s UI from a CLI to a web-app. The web-app has a landing login page that lets users to type in their username and password and login to gyst to see their Inventory and Shopping List. From there we are sent to the main part of the gyst web application. Here, users can add and save their items to the Inventory and Shopping List. The design of the website is made to be accessible with readable fonts and font sizes. 
+In this pull request, I implemented the strategy design pattern (second link contains the new classes that weren’t included in the first pull request). I think this demonstrates a significant contribution to the team because this pattern is used to sort the items in a user’s inventory and shopping list (by expiry date and/or alphabetically). This way, the user can easily see which items are the closest to expiration and find the item(s) they’re looking for easily. This pull request also incorporates much of what we learned about design patterns, interfaces, generics, and comparing objects using Comparable<T> and compareTo().
+
+- Alissa: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/42
+
+In this pull request, I added new features to the login system. This feature included exiting the program if incorrect credentials were inputted, which is essential to the functionality of our login system. As well, while I modified most of the code before so that it adheres to Clean Architecture, in this commit, I modified it further so that only the driver (not the controller) prints output.
+
+- Ali:
+  https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/32
+
+This pull request, combined with the pull request 31 is for the integration of the login system to the gyst structure from phase 1. At this point, due to the conversion from the single-user structure to the multiple-user structure, I implemented the gateway classes to read and write the user information for login use cases, in addition to extending the structure for the storing of the Shopping Lists and Inventory Lists of separate users.
+
+- Aamishi: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/33
+
+Before this pull request, our project was using a command-line interface to interact with our application, gyst. This pull request changes our project’s UI from a CLI to a web-app. The web-app has a landing login page that lets users to type in their username and password and login to gyst to see their Inventory and Shopping List. From there we are sent to the main part of the gyst web application. Here, users can add and save their items to the Inventory and Shopping List. The design of the website is made to be accessible with readable fonts and font sizes.
 
 - Sam: 
+
