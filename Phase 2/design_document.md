@@ -129,7 +129,9 @@ I think this demonstrates a significant contribution to the team because testing
 - Jennifer: <insert link>
 In this pull request, I implemented the strategy design pattern. I think this demonstrates a significant contribution to the team because this pattern is used to sort the items in a user’s inventory and shopping list (by expiry date and/or alphabetically). This way, the user can easily see which items are the closest to expiration and find the item(s) they’re looking for easily. This pull request also incorporates much of what we learned about design patterns, interfaces, and comparing objects using Comparable<T> and compareTo().
 
-- Alissa:  
+- Alissa: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/42 
+
+In this pull request, I added new features to the login system. This feature included exiting the program if incorrect credentials were inputted, which is essential to the functionality of our login system. As well, while I modified most of the code before so that it adheres to Clean Architecture, in this commit, I modified it further so that only the driver (not the controller) prints output. 
 
 - Ali: 
 
