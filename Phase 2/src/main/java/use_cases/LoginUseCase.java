@@ -21,7 +21,13 @@ public class LoginUseCase implements LoginInputBoundary {
         this.users = new UserList();
     }
 
-    UserReadWriter readWriter = new UserReadWriter();
+    /**
+     * Creates a new UserList
+     * @return the new UserList object
+     */
+    public static UserList newUserList() {
+        return new UserList();
+    }
 
     /**
      * / The "output" of this use case.
@@ -32,15 +38,6 @@ public class LoginUseCase implements LoginInputBoundary {
         SUCCESS, FAILURE
     }
 
-    public LoginUseCase(UserList users) {
-        this.users = users;
-        try {
-            readWriter.saveToFile("users.ser", users);
-        } catch (IOException e) {
-            System.out.println("User list did not save.");
-        }
-    }
-
     /**
      * Run the login use case.
      * @param username the username
@@ -49,7 +46,7 @@ public class LoginUseCase implements LoginInputBoundary {
      */
     public LoginResult logIn(String username, String password) {
         User user = users.getUser(username);
-        if (user.passwordMatches(password)) {
+        if (user != null && user.passwordMatches(password)) {
             return LoginResult.SUCCESS;
         } else {
             return LoginResult.FAILURE;
@@ -64,15 +61,6 @@ public class LoginUseCase implements LoginInputBoundary {
     public static void addUser(String username, String password) {
         User user = new User(username, password);
         UserList.add(user);
-    }
-
-    /**
-     * Creates a new UserList
-     * @return the new UserList object
-     */
-    public static UserList newUserList() {
-        UserList users = new UserList();
-        return users;
     }
 
     /**
