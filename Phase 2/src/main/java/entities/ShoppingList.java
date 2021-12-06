@@ -1,5 +1,7 @@
 package entities;
 
+import helpers.Sorter;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -9,12 +11,14 @@ import java.util.ArrayList;
  */
 public class ShoppingList implements ItemList {
 	private final List<Item> shoppingList;
+	private final Sorter<Item> sorter;
 
 	/**
 	 * Initialize a new empty shopping list.
 	 */
-	public ShoppingList() {
+	public ShoppingList(Sorter<Item> sorter) {
 		this.shoppingList = new ArrayList<>();
+		this.sorter = sorter;
 	}
 
 	/**
@@ -52,6 +56,13 @@ public class ShoppingList implements ItemList {
 	 */
 	public void removeItem(int index) {
 		this.shoppingList.remove(index);
+	}
+
+	/**
+	 * Sort the items in this inventory.
+	 */
+	public void sortItems() {
+		sorter.sort(this.shoppingList);
 	}
 
 	/**

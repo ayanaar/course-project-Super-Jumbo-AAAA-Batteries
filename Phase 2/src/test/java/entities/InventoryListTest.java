@@ -1,5 +1,7 @@
 package entities;
 
+import helpers.Sorter;
+import helpers.TimSorter;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +21,8 @@ public class InventoryListTest {
      */
     @Before
     public void setUp() {
-        inventory = new InventoryList();
+        Sorter<Item> sorter = new TimSorter<>();
+        inventory = new InventoryList(sorter);
     }
 
     /**
@@ -69,5 +72,19 @@ public class InventoryListTest {
         inventory.addItem(new Item("toilet paper", 10));
         inventory.removeItem(0);
         assertEquals("0. Name: toilet paper Quantity: 10", inventory.toString());
+    }
+
+    /**
+     * Test that the sortItems() method sorts in the items in the inventory successfully.
+     */
+    @Test(timeout = 200)
+    public void testSortItems() {
+        inventory.addItem(new FoodItem("b", 101, LocalDate.parse("2021-12-10")));
+        inventory.addItem(new FoodItem("c", 444, LocalDate.parse("2021-12-11")));
+        inventory.addItem(new Item("a", 123));
+        inventory.sortItems();
+        assertEquals("0. Name: b Quantity: 101 Expiry Date: 2021-12-10\n" +
+                "1. Name: c Quantity: 444 Expiry Date: 2021-12-11\n" +
+                "2. Name: a Quantity: 123", inventory.toString());
     }
 }

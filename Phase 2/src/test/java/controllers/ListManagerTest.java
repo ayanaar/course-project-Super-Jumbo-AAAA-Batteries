@@ -48,7 +48,7 @@ public class ListManagerTest {
     /**
      * Test that the printInventory() method returns the correct string representation.
      */
-    @Test(timeout = 150)
+    @Test(timeout = 200)
     public void testPrintInventory() {
         listManager.addInventoryItem("detergent", 101, "2021-12-10");
         assertEquals("0. Name: detergent Quantity: 101 Expiry Date: 2021-12-10", listManager.printInventory());
@@ -85,5 +85,33 @@ public class ListManagerTest {
         listManager.addShoppingListItem("glue", 444);
         assertEquals("0. Name: detergent Quantity: 101\n" +
                 "1. Name: glue Quantity: 444", listManager.printShoppingList());
+    }
+
+    /**
+     * Test that the sortList() method sorts the inventory correctly.
+     */
+    @Test(timeout = 200)
+    public void testSortListInventory() {
+        listManager.addInventoryItem("b", 101, "2021-12-10");
+        listManager.addInventoryItem("c", 444, "2021-12-11");
+        listManager.addInventoryItem("a", 123, "");
+        listManager.sortLists();
+        assertEquals("0. Name: b Quantity: 101 Expiry Date: 2021-12-10\n" +
+                "1. Name: c Quantity: 444 Expiry Date: 2021-12-11\n" +
+                "2. Name: a Quantity: 123", listManager.printInventory());
+    }
+
+    /**
+     * Test that the sortList() method sorts the shopping list correctly.
+     */
+    @Test(timeout = 200)
+    public void testSortListShoppingList() {
+        listManager.addShoppingListItem("b", 101);
+        listManager.addShoppingListItem("c", 123);
+        listManager.addShoppingListItem("a", 444);
+        listManager.sortLists();
+        assertEquals("0. Name: a Quantity: 444\n" +
+                "1. Name: b Quantity: 101\n" +
+                "2. Name: c Quantity: 123", listManager.printShoppingList());
     }
 }
