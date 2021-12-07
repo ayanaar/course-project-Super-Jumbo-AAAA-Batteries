@@ -6,31 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77456e14-7f31-42f1-be03-a91167771aea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/controller/ListManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/driver/Gyst.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/entities/FoodItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/entities/InventoryList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/entities/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/entities/ShoppingList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/gateway/LoadingManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/gateway/SavingManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/CmdLineUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/controller/LoginController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/driver/LogInSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/entities/UserList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/gateway/LoginInputBoundary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/gateway/ReadWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/gateway/UserReadWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/use_cases/LoginUseCase$LoginResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/login/use_cases/LoginUseCase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/use_cases/DataHandlingUseCase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/use_cases/InventoryUseCases.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/out/production/main/use_cases/ShoppingListUseCases.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/src/main/java/login/CmdLineUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2/src/main/java/login/CmdLineUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/src/main/java/login/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2/src/main/java/login/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 2/src/main/java/login/use_cases/LoginUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2/src/main/java/login/use_cases/LoginUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase 2/.idea/Phase 2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2/.idea/Phase 2.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +29,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -60,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/Phase 2/src/main/java/login_system" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Phase 2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -78,7 +55,7 @@
       <recent name="C:\Users\jenni\OneDrive\Desktop\Uni\Second Year\Fall\CSC207\course-project-Super-Jumbo-AAAA-Batteries\Phase 1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Gyst">
     <configuration name="Gyst" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -109,8 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Gyst" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -134,6 +111,9 @@
       <workItem from="1638398192595" duration="2726000" />
       <workItem from="1638583803523" duration="598000" />
       <workItem from="1638673576542" duration="616000" />
+      <workItem from="1638907041122" duration="884000" />
+      <workItem from="1638907979913" duration="63000" />
+      <workItem from="1638908618798" duration="17000" />
     </task>
     <servers />
   </component>
