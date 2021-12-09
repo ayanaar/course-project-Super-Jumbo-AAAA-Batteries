@@ -145,6 +145,6 @@ This pull request, combined with the pull request 31 is for the integration of t
 
 Before this pull request, our project was using a command-line interface to interact with our application, gyst. This pull request changes our project’s UI from a CLI to a web-app. The web-app has a landing login page that lets users to type in their username and password and login to gyst to see their Inventory and Shopping List. From there we are sent to the main part of the gyst web application. Here, users can add and save their items to the Inventory and Shopping List. The design of the website is made to be accessible with readable fonts and font sizes.
 
-- Sam: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/49
+- Sam: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/59
    
- From this pull request, I was able to connect significant portions of our java code to our web application using spring boot (Java-based framework). The connected features are as follows: Adding items to inventory and shopping list, Removing items from inventory and shopping list and lastly listing the items from the corresponding list.
+ From this pull request, I was finally able to connect significant portions of our java code to our final web application using spring boot (Java-based framework). The connected features are as follows: logging the user in and out, adding items to inventory and shopping list, removing items from inventory and shopping list, listing items from the corresponding list and lastly saving the signed-in user's list to their dedicated csv file.

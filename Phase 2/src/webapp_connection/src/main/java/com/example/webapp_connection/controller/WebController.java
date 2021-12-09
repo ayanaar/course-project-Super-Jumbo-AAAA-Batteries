@@ -49,38 +49,66 @@ public class WebController {
         return new ModelAndView("redirect:/login_successful");
     }
 
+    @RequestMapping(value = "/item_added_inventory", method = RequestMethod.GET)
+    public ModelAndView ItemAddedInventory() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("item_added_inventory.html");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/item_removed_inventory", method = RequestMethod.GET)
+    public ModelAndView ItemRemovedInventory() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("item_removed_inventory.html");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/item_added_shoppinglist", method = RequestMethod.GET)
+    public ModelAndView ItemAddedShoppingList() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("item_added_shoppinglist.html");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/item_removed_shoppinglist", method = RequestMethod.GET)
+    public ModelAndView ItemRemovedShoppingList() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("item_removed_shoppinglist.html");
+        return modelAndView;
+    }
+
     @PostMapping("/add")
-    public String addItemToShoppingList(@RequestParam String name, @RequestParam int quantity) {
+    public ModelAndView addItemToShoppingList(@RequestParam String name, @RequestParam int quantity) {
         listManager.addShoppingListItem(name, quantity);
-        return "Successfully added the item to your shopping list.";
+        return new ModelAndView("redirect:/item_added_shoppinglist");
     }
 
     @PostMapping("/remove")
-    public String RemoveItemFromShoppingList(@RequestParam int index) {
+    public ModelAndView RemoveItemFromShoppingList(@RequestParam int index) {
         listManager.removeShoppingListItem(index);
-        return "Successfully removed the item from your shopping list.";
+        return new ModelAndView("redirect:/item_removed_shoppinglist");
     }
 
     @GetMapping("/list")
     public String getShoppingListItems() {
-        return listManager.printShoppingList();
+        return listManager.printShoppingList().replaceAll("\n", "<br>");
     }
 
     @PostMapping("/add_inventory")
-    public String addItemToInventoryList(@RequestParam String name, @RequestParam int quantity, @RequestParam String expiryDate) {
+    public ModelAndView addItemToInventoryList(@RequestParam String name, @RequestParam int quantity, @RequestParam String expiryDate) {
         listManager.addInventoryItem(name, quantity, expiryDate);
-        return "Successfully added the item to your inventory list.";
+        return new ModelAndView("redirect:/item_added_inventory");
     }
 
     @PostMapping("/remove_inventory")
-    public String RemoveItemFromInventoryList(@RequestParam int index) {
+    public ModelAndView RemoveItemFromInventoryList(@RequestParam int index) {
         listManager.removeInventoryItem(index);
-        return "Successfully removed the item from your inventory list.";
+        return new ModelAndView("redirect:/item_removed_inventory");
     }
 
     @GetMapping("/list_inventory")
     public String getInventoryListItems() {
-        return listManager.printInventory();
+        return listManager.printInventory().replaceAll("\n", "<br>");
     }
 
     @PostMapping("/save")
