@@ -1,0 +1,96 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> gyst </title>
+    <link rel="stylesheet" href="css/gystStyle.css">
+</head>
+<body>
+<main>
+    <div class="header">
+        <h1><i>gyst</i></h1>
+        <h3>Organisation? You get the <i>gyst</i>.</h3>
+    </div>
+
+    <div class="saveState">
+        <input type="submit" value="Save!"/>
+    </div>
+
+    <div class="lists">
+        <section class="glassInv">
+            <div class="Inventory">
+                <h2>Inventory</h2>
+                <legend>Item Information*:</legend>
+                <form action="/add_inventory" method="POST">
+                    <div>
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Item Name*">
+                    </div>
+                    <div>
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity" name="quantity" placeholder="Quantity*">
+                    </div>
+                    <legend>Date of Expiry*:</legend>
+                    <label for="expiryDate">
+                        <input type="date" name="expiryDate" id="expiryDate" placeholder="Date of Expiry*">
+                    </label>
+                    <div>
+                        <button>Add item</button>
+                    </div>
+                </form>
+
+                <legend>Item #*:</legend>
+                <form action="/remove_inventory" method="POST">
+                    <div>
+                        <label for="index"></label>
+                        <input type="number" id="index" name="index">
+                    </div>
+                    <button>Remove item</button>
+                </form>
+                <form action="/list_inventory" method="GET">
+                    <button>List items</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="glassSL">
+            <div class="Inventory">
+                <h2>Shopping List</h2>
+                <legend>Item Information*:</legend>
+                <form action="/add" method="POST">
+                    <div>
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Item Name*">
+                    </div>
+                    <div>
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity" name="quantity" placeholder="Quantity*">
+                    </div>
+                    <div>
+                        <button>Add item</button>
+                    </div>
+                </form>
+                <legend>Item #*:</legend>
+                <form action="/remove" method="POST">
+                    <div>
+                        <label for="index"></label>
+                        <input type="number" id="index" name="index">
+                    </div>
+                    <button>Remove item</button>
+                </form>
+                <form action="/list" method="GET">
+                    <button>List items</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="logout">
+        <form id="login-form" method="GET" action="index.html">
+            <input type="submit" value="Log out"/>
+        </form>
+    </div>
+</main>
+</body>
+</html>
