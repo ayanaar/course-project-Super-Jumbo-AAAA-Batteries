@@ -80,7 +80,6 @@ public class ShoppingList implements ItemList {
 			String itemOption = i + ". " + this.shoppingList.get(i).toString() + "\n";
 			stringRepresentation.append(itemOption);   // Append item to shopping list representation
 		}
-
 		return stringRepresentation.toString().trim();  // Trim off last \n
 	}
 }
