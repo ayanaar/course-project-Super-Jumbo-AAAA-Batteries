@@ -31,7 +31,6 @@ main {
 
   .glassInv, .glassSL {
     padding: 2%;
-    height: auto;
     width: 450px;
     background: linear-gradient(
         to bottom right,
@@ -39,7 +38,6 @@ main {
     rgba(255, 255, 255, 0.2));
     border-radius: 30px;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -75,7 +73,7 @@ ol {
 
 .lists {
     width: auto;
-    display: flex;      
+    display: flex;
     justify-content: space-evenly;
     }
 
@@ -128,6 +126,9 @@ input[type="number"]{
     line-height: 20px;
     color: rgb(78, 111, 172);
 }
+
+
+
 input[type="submit"] {
     padding:0.3em 1.2em;
     font-size: 25px;
@@ -140,40 +141,17 @@ input[type="submit"] {
     text-align:center;
 }
 
-.loginContainer {
-    padding-top: 50px;
-}
-
-.logout {
-    padding-top: 5%;
-}
-
-.b1, .b2, .b3, .b4{
+.signBox, .passBox {
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 33%;
+    position: center;
 }
 
-.signUp {
-    align-items: center;
-    color: #6679e3;
-}
-
-.footer{
-    text-align: center;
-    color: white;
-    font-size: 15px;
-    position: relative;
-    padding: 30px 30px 50px;
-}
-
-.goBackToLogin {
-    padding-top: 40vh;
-}
 .saveState {
     padding-bottom: 40px;
 }
 
-.loginContainer {
-    justify-content: center;
-    padding-left: 33%;
+.butt {
+    padding: 12px;
 }
