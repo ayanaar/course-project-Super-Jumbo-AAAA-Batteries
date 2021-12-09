@@ -2,14 +2,9 @@ package com.example.webapp_connection.controller;
 
 import controllers.ListManager;
 import controllers.LoginController;
-import driver.CmdLineUI;
-import driver.LogInSystem;
 import gateway.LoadingManager;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.annotation.PostConstruct;
-import java.util.Objects;
 
 @RestController
 public class WebController {

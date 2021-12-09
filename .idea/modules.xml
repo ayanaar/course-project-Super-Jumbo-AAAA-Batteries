@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/course-project-Super-Jumbo-AAAA-Batteries.iml" filepath="$PROJECT_DIR$/.idea/course-project-Super-Jumbo-AAAA-Batteries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../course-project-Super-Jumbo-AAAA-Batteries-samuel_9/Phase 2/src/webapp_connection/webapp_connection.iml" filepath="$PROJECT_DIR$/../course-project-Super-Jumbo-AAAA-Batteries-samuel_9/Phase 2/src/webapp_connection/webapp_connection.iml" />
     </modules>
   </component>
 </project>
