@@ -66,6 +66,23 @@ public class ShoppingListUseCases implements DataHandlingUseCase {
 		SavingManager.ShoppingListSaver(this.toStringBuilder(), username);
 	}
 
+	/**
+	 * Return a string representation of the user's shopping list.
+	 *
+	 * @return a string representation of the user's shopping list.
+	 */
+	@Override
+	public String toString() {
+		StringBuilder stringRepresentation = new StringBuilder();
+
+		// Loop thorough each item in the shopping list
+		for (int i = 0; i < this.shoppingList.getSize(); i++) {
+			// Number each item 0, 1, 2, etc. + their string representation
+			String itemOption = i + ". " + this.shoppingList.getItem(i).toString() + "<br>";
+			stringRepresentation.append(itemOption);   // Append item to shopping list representation
+		}
+		return stringRepresentation.toString().trim();  // Trim off last \n
+	}
 
 	/**
 	 * Return a string representation of the user's shopping list.

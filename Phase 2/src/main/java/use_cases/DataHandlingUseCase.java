@@ -1,5 +1,6 @@
 package use_cases;
 
+
 /**
  * Interface for InventoryLists and ShoppingLists that can save data to the database.
  */

@@ -4,6 +4,7 @@ import entities.User;
 import gateway.LoadingManager;
 import gateway.LoginInputBoundary;
 
+
 public class LoginUseCase implements LoginInputBoundary {
 
     /**

@@ -1,5 +1,6 @@
 package entities;
 
+
 /**
  * A user with a username and password.
  */
