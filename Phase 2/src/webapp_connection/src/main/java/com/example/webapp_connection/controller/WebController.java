@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class WebController {
+    String signedInUser;
     //String currentUser;
     ListManager listManager;
 
@@ -15,6 +16,7 @@ public class WebController {
     //    currentUser = LogInSystem.logInSys(); // this call initiates the login system
     //    listManager = new ListManager(LoadingManager.InventoryListLoader(currentUser), LoadingManager.ShoppingListLoader(currentUser));
     //    currentUser = "";
+        signedInUser = "";
         listManager = null;
     //    listManager = new ListManager(LoadingManager.InventoryListLoader(), LoadingManager.ShoppingListLoader()); //make this ha
     }
@@ -50,6 +52,9 @@ public class WebController {
         if (!currentUser[0].equals("")) {
             result = currentUser[0];
         }
+
+        signedInUser = result;
+
         //listManager.setCurrentUser(finalUser); // need to be able to do this.
         listManager = new ListManager(LoadingManager.InventoryListLoader(result), LoadingManager.ShoppingListLoader(result));
         return new ModelAndView("redirect:/login_successful");
@@ -92,5 +97,12 @@ public class WebController {
     @GetMapping("/list_inventory")
     public String getInventoryListItems() {
         return listManager.printInventory();
+    }
+
+    @PostMapping("/save")
+    public String saveList() {
+        listManager.sortLists();
+        listManager.saveLists(signedInUser);
+        return "List saved!";
     }
 }
