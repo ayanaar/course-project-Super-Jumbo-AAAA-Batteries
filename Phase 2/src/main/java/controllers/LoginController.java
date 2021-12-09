@@ -41,7 +41,6 @@ public class LoginController {
                 return array;
             case FAILURE:
 //                System.out.println("Failed to login!");
-                username = "";
                 array = new String[] {username, "Failed"};
                 return array;
         }
