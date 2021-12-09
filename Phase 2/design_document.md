@@ -41,7 +41,7 @@ In phase 2, we also did some refactoring. For example, most noticeably, we added
 
 ![image](https://user-images.githubusercontent.com/73912656/145330713-da97f1a6-77c7-4f1d-bea0-899391bad057.png)
 
-In the diagram above, we see where inheritance and interface implementation occurs in each layer. In the entities layer, we see that FoodItem is a child of Item, and it inherits all methods and attributes from the Item class. In the Use Cases layer, we can see that there is a DataHandlingUseCase interface that is implemented by the ShoppingListUseCases class and the InventoryUseCase class.
+In the diagram above, we see where inheritance and interface implementation occurs in each layer. In the entities layer, we see that FoodItem is a child of Item, and it inherits all methods and attributes from the Item class. In the Use Cases layer, we can see that there is a DataHandlingUseCase interface that is implemented by the ShoppingListUseCases class and the InventoryUseCase class. (Note that the helper classes were omitted in the UML diagram.)
 
 Our design followed the Clean Architecture principles. We designed _gyst_ so that the user interacts with the website. This ensures that the user can navigate through the inventory system easily, without directly interacting with the high level layer elements such as Entities.
 
