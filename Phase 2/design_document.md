@@ -39,7 +39,7 @@ In phase 2, we also did some refactoring. For example, most noticeably, we added
 ## 2 Implementation <a name="implementation"></a>
 ### 2.1 Clean Architecture <a name="clean-architecture"></a>
 
-![image](https://user-images.githubusercontent.com/76668055/141663572-04f7cb01-ae35-42c3-8ada-8d6aa204b1c7.png)
+![image](https://user-images.githubusercontent.com/73912656/145330713-da97f1a6-77c7-4f1d-bea0-899391bad057.png)
 
 In the diagram above, we see where inheritance and interface implementation occurs in each layer. In the entities layer, we see that FoodItem is a child of Item, and it inherits all methods and attributes from the Item class. In the Use Cases layer, we can see that there is a DataHandlingUseCase interface that is implemented by the ShoppingListUseCases class and the InventoryUseCase class.
 
