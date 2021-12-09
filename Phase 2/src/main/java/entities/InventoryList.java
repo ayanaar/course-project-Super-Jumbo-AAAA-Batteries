@@ -77,7 +77,7 @@ public class InventoryList implements ItemList {
 		// Loop thorough each item in the inventory
 		for (int i = 0; i < this.inventory.size(); i++) {
 			// Number each item 0, 1, 2, etc. + their string representation
-			String itemOption = i + ". " + this.inventory.get(i).toString() + "<br>";
+			String itemOption = i + ". " + this.inventory.get(i).toString() + "\n";
 			stringRepresentation.append(itemOption);   // Append item to inventory representation
 		}
 
