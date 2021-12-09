@@ -9,16 +9,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class WebController {
     String signedInUser;
-    //String currentUser;
     ListManager listManager;
 
     public WebController() {
-    //    currentUser = LogInSystem.logInSys(); // this call initiates the login system
-    //    listManager = new ListManager(LoadingManager.InventoryListLoader(currentUser), LoadingManager.ShoppingListLoader(currentUser));
-    //    currentUser = "";
         signedInUser = "";
         listManager = null;
-    //    listManager = new ListManager(LoadingManager.InventoryListLoader(), LoadingManager.ShoppingListLoader()); //make this ha
     }
 
     @RequestMapping(value = "/login_failed", method = RequestMethod.GET)
@@ -40,9 +35,6 @@ public class WebController {
         LoginController.loadingUserList();
         LoginController controller = new LoginController(LoginController.creatingUseCase());
 
-        // CmdLineUI ui = new CmdLineUI(); // UI. The block of code below performs the same task, but
-        //                                        takes RequestParams as input values.
-
         String[] currentUser = new String[2];
         currentUser = controller.runLogin(username, password);
         if (currentUser[1].equals("Failed")) {
@@ -55,15 +47,9 @@ public class WebController {
 
         signedInUser = result;
 
-        //listManager.setCurrentUser(finalUser); // need to be able to do this.
         listManager = new ListManager(LoadingManager.InventoryListLoader(result), LoadingManager.ShoppingListLoader(result));
         return new ModelAndView("redirect:/login_successful");
     }
-        /*
-        if (username.equals("a") & password.equals("b")){
-            return new ModelAndView("redirect:/login_successful");
-        }   else {
-            return new ModelAndView("redirect:/login_failed"); */
 
     @PostMapping("/add")
     public String addItemToShoppingList(@RequestParam String name, @RequestParam int quantity) {
