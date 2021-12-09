@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.header{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    padding: 10px 10px 50px;
+}
+
+.login h2 {
+    text-align: center;
+    font-size: 35px;
+    }
+  
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #87d5ed, #6679e3);
+    background-position: center;
+    padding-bottom: 5%;
+    text-align: center;
+    margin: auto;
+    /* --- #87d5ed, #6679e3 ---> */
+  }
+
+  .glassInv, .glassSL {
+    padding: 2%;
+    height: auto;
+    width: 450px;
+    background: linear-gradient(
+        to bottom right,
+    rgba(255, 255, 255, 0.5), 
+    rgba(255, 255, 255, 0.2));
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1 {
+    padding: 0;
+    font-size: 80px;
+    margin: 2%;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 80px;
+    text-align: justify;
+    color: white;
+}
+
+
+ol {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: justify;
+    color: white;
+}
+
+.lists {
+    width: auto;
+    display: flex;      
+    justify-content: space-evenly;
+    }
+
+button {
+    padding:0.3em 1.2em;
+    font-size: 25px;
+    margin: 0;
+    width: fit-content;
+    border-radius: 2em;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#90b8cf;
+    text-align:center;
+    }
+    
+button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    }
+
+.text{
+    font-size: 25px;
+    box-sizing: border-box;
+    border-radius: 2em;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#90b8cf;
+    text-align:center;
+    align-items: center;
+}
+legend{
+    margin: auto;
+    padding: 5px 15px 20px 7px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"]{
+    display: block;
+    padding: 15px;
+    margin: 2%;
+    border: 0;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 20px;
+    color: rgb(78, 111, 172);
+}
+input[type="submit"] {
+    padding:0.3em 1.2em;
+    font-size: 25px;
+    margin: 0;
+    width: fit-content;
+    border-radius: 2em;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#90b8cf;
+    text-align:center;
+}
+
+.loginContainer {
+    padding-top: 50px;
+}
+
+.logout {
+    padding-top: 5%;
+}
+
+.b1, .b2, .b3, .b4{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.signUp {
+    align-items: center;
+    color: #6679e3;
+}
+
+.footer{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    padding: 30px 30px 50px;
+}
+
+.goBackToLogin {
+    padding-top: 40vh;
+}
+.saveState {
+    padding-bottom: 40px;
+}
+
+.loginContainer {
+    justify-content: center;
+    padding-left: 33%;
+}
