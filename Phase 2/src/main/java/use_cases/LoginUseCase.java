@@ -3,9 +3,6 @@ import entities.UserList;
 import entities.User;
 import gateway.LoadingManager;
 import gateway.LoginInputBoundary;
-import gateway.UserReadWriter;
-
-import java.io.IOException;
 
 public class LoginUseCase implements LoginInputBoundary {
 
@@ -13,7 +10,6 @@ public class LoginUseCase implements LoginInputBoundary {
      * A list of users organized by username.
      */
     private final UserList users;
-    UserReadWriter readWriter = new UserReadWriter();
 
     /**
      * Serializes and deserializes list of users
@@ -33,8 +29,6 @@ public class LoginUseCase implements LoginInputBoundary {
     /**
      * / The "output" of this use case.
      */
-    // Note: This could also be a fully-fledged class if we need to return
-    // information to the controller.
     public enum LoginResult {
         SUCCESS, FAILURE
     }

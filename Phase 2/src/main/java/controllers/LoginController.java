@@ -6,8 +6,6 @@ import gateway.LoginInputBoundary;
 /**
  * Controls the process for logging in.
  */
-// If we handled logging out as well, this would be a good controller
-// to do it in. It could have runLogin and runLogout methods.
 public class LoginController {
 
     /**
@@ -35,12 +33,9 @@ public class LoginController {
         String[] array = new String[2];
         switch (result) {
             case SUCCESS:
-                // TODO: change this
-//                System.out.println("Success! Welcome, " + username + "!")
                 array = new String[] {username, "Success"};
                 return array;
             case FAILURE:
-//                System.out.println("Failed to login!");
                 array = new String[] {username, "Failed"};
                 return array;
         }

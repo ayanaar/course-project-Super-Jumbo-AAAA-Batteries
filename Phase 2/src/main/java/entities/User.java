@@ -1,12 +1,9 @@
 package entities;
-import java.io.Serializable;
 
 /**
  * A user with a username and password.
- *
- * IMPORTANT: We are ignoring password encryption in this example. (See CSC209.)
  */
-public class User implements Serializable {
+public class User{
 
     /**
      * The username.
@@ -16,7 +13,6 @@ public class User implements Serializable {
      * The password.
      */
     private final String password;
-    //note how these are both declared final, since they never change given the current code
 
     /**
      * A new user with username and password. We are completely ignoring
