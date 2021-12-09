@@ -44,9 +44,7 @@ public class WebController {
         if (!currentUser[0].equals("")) {
             result = currentUser[0];
         }
-
         signedInUser = result;
-
         listManager = new ListManager(LoadingManager.InventoryListLoader(result), LoadingManager.ShoppingListLoader(result));
         return new ModelAndView("redirect:/login_successful");
     }

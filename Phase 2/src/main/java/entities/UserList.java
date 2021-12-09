@@ -1,5 +1,4 @@
 package entities;
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import entities.User;
@@ -7,9 +6,6 @@ import entities.User;
 /**
  * A map of username —> User object.
  */
-// What do we gain by defining this class and storing an instance of it
-// in the LogInUseCase class, as opposed to just
-// storing a Map<String, User> in the LogInUseCase class?
 public class UserList {
     private static final Map<String, User> users = new HashMap<>();
 
