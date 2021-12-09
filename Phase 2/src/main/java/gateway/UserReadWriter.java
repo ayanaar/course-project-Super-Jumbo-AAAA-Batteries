@@ -1,5 +1,4 @@
 package gateway;
-import gateway.ReadWriter;
 
 import java.io.*;
 
@@ -11,7 +10,6 @@ public class UserReadWriter implements ReadWriter {
      *
      * @param filePath the file to write the records to
      * @param users    stores the list of users to be serialized
-     * @throws IOException
      */
     @Override
     public void saveToFile(String filePath, Object users) throws IOException {
@@ -24,26 +22,4 @@ public class UserReadWriter implements ReadWriter {
         output.writeObject(users);
         output.close();
     }
-
-
-//    /**
-//     * Store the users to file at filePath.
-//     *
-//     * @param filePath file where the user list is stored
-//     * @param o        the object to be serialized
-//     * @return list of users
-//     * @throws IOException
-//     */
-//    @Override
-//    public UserList readFromFile(String filePath) throws IOException, ClassNotFoundException {
-//
-//        InputStream file = new FileInputStream(filePath);
-//        InputStream buffer = new BufferedInputStream(file);
-//        ObjectInput input = new ObjectInputStream(buffer);
-//
-//        // serialize the Map
-//        UserList users = (UserList) input.readObject();
-//        input.close();
-//        return users;
-//    }
 }
