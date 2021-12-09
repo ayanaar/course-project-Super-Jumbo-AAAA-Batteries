@@ -1,7 +1,7 @@
 package entities;
 import java.util.HashMap;
 import java.util.Map;
-import entities.User;
+
 
 /**
  * A map of username —> User object.
