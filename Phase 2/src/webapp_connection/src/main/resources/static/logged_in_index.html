@@ -19,18 +19,18 @@
     </div>
 
     <div class="lists">
-        <section class="glassInv">
+        <div class="glassInv">
             <div class="Inventory">
                 <h2>Inventory</h2>
                 <legend>Item Information*:</legend>
                 <form action="/add_inventory" method="POST">
                     <div>
                         <label for="name"></label>
-                        <input type="text" id="name" name="name" placeholder="Item Name*">
+                        <input type="text" id="name1" name="name" placeholder="Item Name*">
                     </div>
                     <div>
                         <label for="quantity"></label>
-                        <input type="number" id="quantity" name="quantity" placeholder="Quantity*">
+                        <input type="number" id="quantity1" name="quantity" placeholder="Quantity*">
                     </div>
                     <legend>Date of Expiry*:</legend>
                     <label for="expiryDate">
@@ -49,13 +49,15 @@
                     </div>
                     <button>Remove item</button>
                 </form>
-                <form action="/list_inventory" method="GET">
-                    <button>List items</button>
-                </form>
+                <div class="butt">
+                    <form action="/list_inventory" method="GET">
+                        <button>List items</button>
+                    </form>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <section class="glassSL">
+        <div class="glassSL">
             <div class="Inventory">
                 <h2>Shopping List</h2>
                 <legend>Item Information*:</legend>
@@ -76,7 +78,7 @@
                 <form action="/remove" method="POST">
                     <div>
                         <label for="index"></label>
-                        <input type="number" id="index" name="index">
+                        <input type="number" id="index1" name="index">
                     </div>
                     <button>Remove item</button>
                 </form>
@@ -84,7 +86,7 @@
                     <button>List items</button>
                 </form>
             </div>
-        </section>
+        </div>
     </div>
     <div class="logout">
         <form id="login-form" method="GET" action="index.html">
