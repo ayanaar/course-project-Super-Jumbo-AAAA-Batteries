@@ -8,9 +8,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class WebController {
+    String signedInUser;
     ListManager listManager;
 
     public WebController() {
+        signedInUser = "";
         listManager = null;
     }
 
@@ -42,6 +44,7 @@ public class WebController {
         if (!currentUser[0].equals("")) {
             result = currentUser[0];
         }
+        signedInUser = result;
         listManager = new ListManager(LoadingManager.InventoryListLoader(result), LoadingManager.ShoppingListLoader(result));
         return new ModelAndView("redirect:/login_successful");
     }
@@ -78,5 +81,12 @@ public class WebController {
     @GetMapping("/list_inventory")
     public String getInventoryListItems() {
         return listManager.printInventory();
+    }
+
+    @PostMapping("/save")
+    public String saveList() {
+        listManager.sortLists();
+        listManager.saveLists(signedInUser);
+        return "List saved!";
     }
 }

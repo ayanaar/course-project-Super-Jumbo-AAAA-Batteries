@@ -77,10 +77,9 @@ public class ShoppingList implements ItemList {
 		// Loop thorough each item in the shopping list
 		for (int i = 0; i < this.shoppingList.size(); i++) {
 			// Number each item 0, 1, 2, etc. + their string representation
-			String itemOption = i + ". " + this.shoppingList.get(i).toString() + "\n";
+			String itemOption = i + ". " + this.shoppingList.get(i).toString() + "<br>";
 			stringRepresentation.append(itemOption);   // Append item to shopping list representation
 		}
-
 		return stringRepresentation.toString().trim();  // Trim off last \n
 	}
 }
