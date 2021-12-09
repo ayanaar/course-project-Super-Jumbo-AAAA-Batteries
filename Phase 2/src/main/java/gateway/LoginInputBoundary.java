@@ -1,6 +1,7 @@
 package gateway;
 import use_cases.LoginUseCase;
 
+
 /**
  * The input boundary for the login use case.
  */

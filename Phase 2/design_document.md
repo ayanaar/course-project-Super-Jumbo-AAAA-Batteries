@@ -81,8 +81,6 @@ Our group implemented the dependency injection design pattern. For example, when
 
 We also implemented the private class data design pattern in many different classes. The point of this design pattern was to reduce the exposure of instance variables by limiting their visibility outside of the class. This way, these variables cannot be randomly changed without the class’ “permission.” For example, the Item entity class has private name and quantity instance variables so that other classes cannot access them and possibly change them to an unexpected value.
 
-Script: A third design pattern we implemented is the strategy design pattern. We created two helper classes, a Sorter interface and a TimSorter class. These classes are used to sort the InventoryList entity items by expiry date or alphabetically by name if the item does not have an expiry date. The same applies to the ShoppingList entity. The Item and FoodItem entities implement the Comparable interface and the compareTo() method. We sort the inventory and shopping list every time the user saves. Overall, the user can easily see the items closest to expiration at the front of the inventory list.
-
 A third design pattern we implemented is the strategy design pattern. We created two helper classes, a Sorter<T> interface with a sort() method and a TimSorter<T> class that implements this interface. The TimSorter class sorts a List<T>, which we will specifically use to sort the InventoryList items by expiry date (i.e., item closest to expiration). If an item does not have an expiration date, it is sorted alphabetically by name. The ShoppingList items are also sorted alphabetically by name. In order to sort these items, the entities, Item and FoodItem, implement the Comparable<Item> interface, which has the compareTo() method. Two FoodItems will compare expiry dates and two Items will compare their names. When comparing a FoodItem to an Item, the FoodItem always comes first. Overall, the inventory is sorted so that the items closest to expiration are at the front of the inventory list for the user to see easily. Similarly, the shopping list is sorted alphabetically so that the user can find the items easily.
 
 
@@ -130,8 +128,7 @@ I think this demonstrates a significant contribution to the team because testing
 
 - Jennifer: https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/44
 
-
-https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/46
+- https://github.com/CSC207-UofT/course-project-Super-Jumbo-AAAA-Batteries/pull/46
 
 In this pull request, I implemented the strategy design pattern (second link contains the new classes that weren’t included in the first pull request). I think this demonstrates a significant contribution to the team because this pattern is used to sort the items in a user’s inventory and shopping list (by expiry date and/or alphabetically). This way, the user can easily see which items are the closest to expiration and find the item(s) they’re looking for easily. This pull request also incorporates much of what we learned about design patterns, interfaces, generics, and comparing objects using Comparable<T> and compareTo().
 

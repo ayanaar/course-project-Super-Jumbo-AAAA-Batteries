@@ -28,7 +28,7 @@ public class SavingManager {
             pw.close();
 
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
     }
 
@@ -46,7 +46,7 @@ public class SavingManager {
             pw.close();
 
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
     }
 }
