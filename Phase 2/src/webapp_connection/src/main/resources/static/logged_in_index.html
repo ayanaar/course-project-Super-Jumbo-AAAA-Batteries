@@ -26,15 +26,15 @@
                 <form action="/add_inventory" method="POST">
                     <div>
                         <label for="name"></label>
-                        <input type="text" id="name1" name="name" placeholder="Item Name*">
+                        <input type="text" id="name1" name="name" placeholder="Item Name*" required>
                     </div>
                     <div>
                         <label for="quantity"></label>
-                        <input type="number" id="quantity1" name="quantity" placeholder="Quantity*">
+                        <input type="number" id="quantity1" name="quantity" placeholder="Quantity*" min="1" required>
                     </div>
-                    <legend>Date of Expiry*:</legend>
+                    <legend>Date of Expiry:</legend>
                     <label for="expiryDate">
-                        <input type="date" name="expiryDate" id="expiryDate" placeholder="Date of Expiry*">
+                        <input type="date" name="expiryDate" id="expiryDate" placeholder="Date of Expiry" min="2021-12-10">
                     </label>
                     <div>
                         <button>Add item</button>
@@ -45,7 +45,7 @@
                 <form action="/remove_inventory" method="POST">
                     <div>
                         <label for="index"></label>
-                        <input type="number" id="index" name="index">
+                        <input type="number" id="index" name="index" min="0" required>
                     </div>
                     <button>Remove item</button>
                 </form>
@@ -64,11 +64,11 @@
                 <form action="/add" method="POST">
                     <div>
                         <label for="name"></label>
-                        <input type="text" id="name" name="name" placeholder="Item Name*">
+                        <input type="text" id="name" name="name" placeholder="Item Name*" required>
                     </div>
                     <div>
                         <label for="quantity"></label>
-                        <input type="number" id="quantity" name="quantity" placeholder="Quantity*">
+                        <input type="number" id="quantity" name="quantity" placeholder="Quantity*" min="1" required>
                     </div>
                     <div>
                         <button>Add item</button>
@@ -78,7 +78,7 @@
                 <form action="/remove" method="POST">
                     <div>
                         <label for="index"></label>
-                        <input type="number" id="index1" name="index">
+                        <input type="number" id="index1" name="index" min="0" required>
                     </div>
                     <button>Remove item</button>
                 </form>
