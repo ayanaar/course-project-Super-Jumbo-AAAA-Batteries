@@ -83,25 +83,6 @@ public class InventoryUseCases implements DataHandlingUseCase {
 	 *
 	 * @return a string representation of the user's inventory.
 	 */
-	@Override
-	public String toString() {
-		StringBuilder stringRepresentation = new StringBuilder();
-
-		// Loop thorough each item in the inventory
-		for (int i = 0; i < this.inventory.getSize(); i++) {
-			// Number each item 0, 1, 2, etc. + their string representation
-			String itemOption = i + ". " + this.inventory.getItem(i).toString() + "<br>";
-			stringRepresentation.append(itemOption);   // Append item to inventory representation
-		}
-
-		return stringRepresentation.toString().trim();  // Trim off last \n
-	}
-
-	/**
-	 * Return a string representation of the user's inventory.
-	 *
-	 * @return a string representation of the user's inventory.
-	 */
 	private StringBuilder toStringBuilder() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("index,item name,quantity,expiry date\r\n");

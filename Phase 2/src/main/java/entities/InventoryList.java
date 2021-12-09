@@ -64,4 +64,23 @@ public class InventoryList implements ItemList {
 	public void sortItems() {
 		sorter.sort(this.inventory);
 	}
+
+	/**
+	 * Return a string representation of the user's inventory.
+	 *
+	 * @return a string representation of the user's inventory.
+	 */
+	@Override
+	public String toString() {
+		StringBuilder stringRepresentation = new StringBuilder();
+
+		// Loop thorough each item in the inventory
+		for (int i = 0; i < this.inventory.size(); i++) {
+			// Number each item 0, 1, 2, etc. + their string representation
+			String itemOption = i + ". " + this.inventory.get(i).toString() + "<br>";
+			stringRepresentation.append(itemOption);   // Append item to inventory representation
+		}
+
+		return stringRepresentation.toString().trim();  // Trim off last \n
+	}
 }
