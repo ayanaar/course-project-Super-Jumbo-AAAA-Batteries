@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77456e14-7f31-42f1-be03-a91167771aea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/controller/ListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/controller/ListManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/driver/Gyst.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/driver/Gyst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/entities/InventoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/InventoryList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/entities/ShoppingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/entities/ShoppingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/InventoryUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/InventoryUseCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/ShoppingListUseCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/main/java/use_cases/ShoppingListUseCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase 1/src/test/java/FoodItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1/src/test/java/FoodItemTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="77456e14-7f31-42f1-be03-a91167771aea" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,15 +25,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Phase 1" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/Phase 2/src/main/java/login_system" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Phase 2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -55,7 +51,7 @@
       <recent name="C:\Users\jenni\OneDrive\Desktop\Uni\Second Year\Fall\CSC207\course-project-Super-Jumbo-AAAA-Batteries\Phase 1" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Gyst" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -71,8 +67,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.toronto.csc207.Main" />
+      <module name="course-project-Super-Jumbo-AAAA-Batteries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.toronto.csc207.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Gyst" />
       </list>
     </recent_temporary>
@@ -92,6 +102,11 @@
       <workItem from="1636665929571" duration="106000" />
       <workItem from="1636666148382" duration="237000" />
       <workItem from="1636666484521" duration="2035000" />
+      <workItem from="1638229651159" duration="2229000" />
+      <workItem from="1638393178723" duration="4069000" />
+      <workItem from="1638398192595" duration="2726000" />
+      <workItem from="1638583803523" duration="598000" />
+      <workItem from="1639028375308" duration="34000" />
     </task>
     <servers />
   </component>

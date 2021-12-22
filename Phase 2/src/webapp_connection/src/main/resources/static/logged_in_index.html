@@ -1,0 +1,138 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> gyst </title>
+    <link rel="stylesheet" href="css/gystStyle.css">
+</head>
+<body>
+<main>
+    <div class="header">
+        <h1><i>gyst</i></h1>
+        <h3>Organisation? You get the <i>gyst</i>.</h3>
+    </div>
+
+    <form action="/save" method="POST">
+        <div>
+            <button>Save</button>
+        </div>
+    </form>
+
+    <div class="lists">
+        <div class="glassInv">
+            <div class="Inventory">
+                <h2>Inventory</h2>
+                <legend>Item Information*:</legend>
+                <form action="/add_inventory" method="POST">
+                    <div>
+                        <label for="name"></label>
+                        <input list="Inventory Items" type="text" id="name1" name="name" placeholder="Item Name*" required>
+                        <datalist id="Inventory Items">
+                            <option value="banana">
+                            <option value="strawberry">
+                            <option value="apple">
+                            <option value="cupcakes">
+                            <option value="egg">
+                            <option value="milk">
+                            <option value="bread">
+                            <option value="chicken">
+                            <option value="detergant">
+                            <option value="donut">
+                            <option value="cheese">
+                            <option value="grapes">
+                            <option value="orange">
+                            <option value="tomato">
+                            <option value="yogurt">
+                            <option value="potato">
+                            <option value="fish">
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity1" name="quantity" placeholder="Quantity*" min="1" required>
+                    </div>
+                    <legend>Date of Expiry:</legend>
+                    <label for="expiryDate">
+                        <input type="date" name="expiryDate" id="expiryDate" placeholder="Date of Expiry" min="2021-12-10">
+                    </label>
+                    <div>
+                        <button>Add item</button>
+                    </div>
+                </form>
+
+                <legend>Item #*:</legend>
+                <form action="/remove_inventory" method="POST">
+                    <div>
+                        <label for="index"></label>
+                        <input type="number" id="index" name="index" min="0" required>
+                    </div>
+                    <button>Remove item</button>
+                </form>
+                <div class="butt">
+                    <form action="/list_inventory" method="GET">
+                        <button>List items</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="glassSL">
+            <div class="Inventory">
+                <h2>Shopping List</h2>
+                <legend>Item Information*:</legend>
+                <form action="/add" method="POST">
+                    <div>
+                        <label for="name"></label>
+                        <input list="Shopping Items" type="text" id="name" name="name" placeholder="Item Name*" required>
+                        <datalist id="Shopping Items">
+                            <option value="banana">
+                            <option value="strawberry">
+                            <option value="apple">
+                            <option value="cupcakes">
+                            <option value="egg">
+                            <option value="milk">
+                            <option value="bread">
+                            <option value="chicken">
+                            <option value="detergant">
+                            <option value="donut">
+                            <option value="cheese">
+                            <option value="grapes">
+                            <option value="orange">
+                            <option value="tomato">
+                            <option value="yogurt">
+                            <option value="potato">
+                            <option value="fish">
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity" name="quantity" placeholder="Quantity*" min="1" required>
+                    </div>
+                    <div>
+                        <button>Add item</button>
+                    </div>
+                </form>
+                <legend>Item #*:</legend>
+                <form action="/remove" method="POST">
+                    <div>
+                        <label for="index"></label>
+                        <input type="number" id="index1" name="index" min="0" required>
+                    </div>
+                    <button>Remove item</button>
+                </form>
+                <form action="/list" method="GET">
+                    <button>List items</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="logout">
+        <form id="login-form" method="GET" action="index.html">
+            <input type="submit" value="Log out"/>
+        </form>
+    </div>
+</main>
+</body>
+</html>
