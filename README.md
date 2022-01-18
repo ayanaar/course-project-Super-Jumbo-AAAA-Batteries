@@ -2,7 +2,7 @@
 
 gyst is an inventory organization application designed and implemented by Ayanaa Rahman, Aamishi Avarsekar, Alissa Lozkhin, Jennifer Cao, Ali Keya, and Samuel Shin. 
 
-Details can be found in the design document under the phase 2 folder. 
+Details can be found in the design document under the phase 2 folder within the specification. Refer to the scenario walkthrough in the design document for a brief overview of some of the features in our application.
 
 
 
